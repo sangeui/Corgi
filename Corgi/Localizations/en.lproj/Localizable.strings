@@ -1,0 +1,73 @@
+/* 
+  Localizable.strings
+  Corgi
+
+  Created by 서상의 on 2021/10/24.
+  
+*/
+
+// MARK: - Home
+"home_caption_guide" = "The entire list is displayed in order of the most recently created date.";
+"home_copy_guide_title" = "Copy Bookmark";
+"home_copy_guide_content" = "Touch and hold a bookmark and tap Copy";
+"home_paste_guide_title" = "Quick Bookmark Save";
+
+"home_bookmarks_empty" = "Save your bookmarks first";
+"home_paste_bookmark" = "Copy";
+
+// MARK: - Bookmark
+"bookmark_title_group" = "Group";
+"bookmark_title_url" = "URL";
+"bookmark_title_description" = "Description";
+
+// MARK: - Addition
+"addition_title" = "New Bookmark";
+
+"addition_placeholder_group" = "Group";
+"addition_placeholder_description" = "Description";
+"addition_button_save" = "Save";
+
+// MARK: - Settings
+"settings_title_normal" = "Normal";
+"settings_title_others" = "Others";
+
+"settings_title_normal_clear" = "Clear all data";
+"settings_title_normal_uistyle" = "Appearance";
+
+"settings_dialog_uistyle_title" = "Update Appearance";
+"settings_dialog_clear_title" = "Clear All Data";
+"settings_dialog_clear_content" = "All data will be removed from your device.";
+
+"settings_title_others_feedback" = "Send feedback";
+
+"settings_uistyle_dark" = "Dark";
+"settings_uistyle_light" = "Light";
+"settings_uistyle_default" = "Default";
+
+"settings_dialog_confirm" = "Confirm";
+"settings_dialog_cancel" = "Cancel";
+
+// MARK: - Groups
+"groups_empty_groups" = "Save your bookmarks first";
+
+"groups_edit_guide_title" = "Edit Group";
+"groups_edit_guide_content" = "Touch and hold a group and tap the menu you want.";
+
+"groups_edit_name" = "Edit Name";
+"groups_delete_group" = "Delete Group";
+
+"groups_search" = "Search groups";
+
+"groups_dialog_delete_title" = "Delete Group";
+"groups_dialog_delete_content" = "All bookmarks included in the selected group will also be deleted.";
+"groups_dialog_edit_name_title" = "Edit Name";
+
+"groups_dialog_confirm" = "Confirm";
+"groups_dialog_cancel" = "Cancel";
+
+// MARK: - Bookmarks
+"bookmarks_group_name" = "Group name";
+"bookmarks_other_group" = "Other groups";
+
+"bookmarks_empty_bookmarks" = "Save your bookmarks first";
+"bookmarks_copy_name" = "Copy";

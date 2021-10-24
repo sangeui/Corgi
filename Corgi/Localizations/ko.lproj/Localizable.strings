@@ -1,0 +1,73 @@
+/* 
+  Localizable.strings
+  Corgi
+
+  Created by 서상의 on 2021/10/24.
+  
+*/
+
+// MARK: - Home
+"home_caption_guide" = "전체 목록은 최근 추가된 날짜 순서대로 보여집니다";
+"home_copy_guide_title" = "북마크 복사하기";
+"home_copy_guide_content" = "북마크를 길게 터치하고 복사하기를 탭하세요";
+"home_paste_guide_title" = "새로운 북마크 추가하기";
+
+"home_bookmarks_empty" = "저장된 북마크가 없습니다";
+"home_paste_bookmark" = "복사하기";
+
+// MARK: - Bookmark
+"bookmark_title_group" = "그룹";
+"bookmark_title_url" = "주소";
+"bookmark_title_description" = "설명";
+
+// MARK: - Addition
+"addition_title" = "새로운 북마크";
+
+"addition_placeholder_group" = "그룹";
+"addition_placeholder_description" = "설명";
+"addition_button_save" = "저장하기";
+
+// MARK: - Settings
+"settings_title_normal" = "일반";
+"settings_title_others" = "기타";
+
+"settings_title_normal_clear" = "모든 데이터 삭제";
+"settings_title_normal_uistyle" = "화면 표현 방식 변경";
+
+"settings_dialog_uistyle_title" = "화면 표현 방식을 변경합니다";
+"settings_dialog_clear_title" = "모든 데이터 삭제하기";
+"settings_dialog_clear_content" = "기기에 저장된 모든 기기가 삭제됩니다.";
+
+"settings_title_others_feedback" = "피드백 보내기";
+
+"settings_uistyle_dark" = "어두움";
+"settings_uistyle_light" = "밝음";
+"settings_uistyle_default" = "자동";
+
+"settings_dialog_confirm" = "확인";
+"settings_dialog_cancel" = "취소";
+
+// MARK: - Groups
+"groups_empty_groups" = "저장된 그룹이 없습니다";
+
+"groups_edit_guide_title" = "그룹 정보 변경하기";
+"groups_edit_guide_content" = "그룹을 길게 터치하고 원하시는 메뉴를 탭하세요.";
+
+"groups_edit_name" = "이름 변경하기";
+"groups_delete_group" = "그룹 삭제하기";
+
+"groups_search" = "그룹 검색하기";
+
+"groups_dialog_delete_title" = "그룹 삭제하기";
+"groups_dialog_delete_content" = "선택하신 그룹에 포함된 모든 북마크도 삭제됩니다.";
+"groups_dialog_edit_name_title" = "그룹 이름 변경하기";
+
+"groups_dialog_confirm" = "확인";
+"groups_dialog_cancel" = "취소";
+
+// MARK: - Bookmarks
+"bookmarks_group_name" = "그룹 이름";
+"bookmarks_other_group" = "다른 그룹 보기";
+
+"bookmarks_empty_bookmarks" = "저장된 북마크가 없습니다";
+"bookmarks_copy_name" = "복사하기";
