@@ -387,6 +387,28 @@
 			path = Bookmarks;
 			sourceTree = "<group>";
 		};
+		4F3F5D362726760A00164F3F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4FAE632E26DE8FC80057A4A7 /* Extension UIKit */,
+				4FAE637B26E51EEE0057A4A7 /* Extension Foundation */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4F3F5D372726774900164F3F /* Dependency Container */ = {
+			isa = PBXGroup;
+			children = (
+				4FAE632326DE8EC30057A4A7 /* MainDependencyContainer.swift */,
+				4FAE634B26DFF15A0057A4A7 /* HomeDependencyContainer.swift */,
+				4FAE633926DFE3A20057A4A7 /* BookmarkDependencyContainer.swift */,
+				4FAE633B26DFE3F60057A4A7 /* CategoryDependencyContainer.swift */,
+				4FF0103426F71857009CABCC /* SettingsDependencyContainer.swift */,
+				4F77691E2718899C009D2C5F /* SubDependencyContainer.swift */,
+			);
+			path = "Dependency Container";
+			sourceTree = "<group>";
+		};
 		4F4C1731272097C600A99CB4 /* Guide */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,12 +679,12 @@
 			path = Bookmarks;
 			sourceTree = "<group>";
 		};
-		4F8CE02227246CE5000E6E4B /* Localizations */ = {
+		4F8CE02227246CE5000E6E4B /* Localization */ = {
 			isa = PBXGroup;
 			children = (
 				4F8CE02927252707000E6E4B /* Localizable.strings */,
 			);
-			path = Localizations;
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		4FAE630226DE8DC20057A4A7 = {
@@ -691,11 +713,11 @@
 			isa = PBXGroup;
 			children = (
 				4F8AB8492704DC14001B82DF /* Corgi.entitlements */,
-				4F8CE02227246CE5000E6E4B /* Localizations */,
 				4F1711BD271EF873000AC173 /* Design */,
+				4F8CE02227246CE5000E6E4B /* Localization */,
 				4F3F5D33272672D600164F3F /* Manager */,
-				4FAE637B26E51EEE0057A4A7 /* Corgi Foundation */,
-				4FAE632E26DE8FC80057A4A7 /* Corgi UIKit */,
+				4F3F5D362726760A00164F3F /* Extension */,
+				4F3F5D372726774900164F3F /* Dependency Container */,
 				4FAE634526DFEE420057A4A7 /* User Interface */,
 				4FAE630E26DE8DC20057A4A7 /* AppDelegate.swift */,
 				4FAE631026DE8DC20057A4A7 /* SceneDelegate.swift */,
@@ -706,19 +728,9 @@
 			path = Corgi;
 			sourceTree = "<group>";
 		};
-		4FAE632226DE8EBB0057A4A7 /* Dependency Container */ = {
-			isa = PBXGroup;
-			children = (
-				4FAE632326DE8EC30057A4A7 /* MainDependencyContainer.swift */,
-				4F77691E2718899C009D2C5F /* SubDependencyContainer.swift */,
-			);
-			path = "Dependency Container";
-			sourceTree = "<group>";
-		};
 		4FAE632526DE8EE40057A4A7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4FAE634A26DFF14F0057A4A7 /* Dependency */,
 				4FAE637426E511300057A4A7 /* Navigator */,
 				4FAE636F26E48E580057A4A7 /* View */,
 				4FAE634D26DFF49F0057A4A7 /* Addition */,
@@ -731,7 +743,6 @@
 		4FAE632626DE8EED0057A4A7 /* Groups */ = {
 			isa = PBXGroup;
 			children = (
-				4FAE633F26DFE9C40057A4A7 /* Dependency */,
 				4F8AB89E270AE630001B82DF /* Presentor */,
 				4F8AB87B2708ADEE001B82DF /* View */,
 				4FAE632A26DE8F0F0057A4A7 /* GroupsViewController.swift */,
@@ -743,7 +754,6 @@
 		4FAE632726DE8EF10057A4A7 /* Bookmark */ = {
 			isa = PBXGroup;
 			children = (
-				4FAE635226E287240057A4A7 /* Dependency */,
 				4F8AB85327065D63001B82DF /* Navigator */,
 				4F83D474270EEAB30056D56D /* View */,
 				4FAE635526E288980057A4A7 /* BookmarkVIewModel.swift */,
@@ -752,7 +762,7 @@
 			path = Bookmark;
 			sourceTree = "<group>";
 		};
-		4FAE632E26DE8FC80057A4A7 /* Corgi UIKit */ = {
+		4FAE632E26DE8FC80057A4A7 /* Extension UIKit */ = {
 			isa = PBXGroup;
 			children = (
 				4F8AB8782708745E001B82DF /* Corgi Keyboard Observer */,
@@ -767,7 +777,7 @@
 				4FAE637226E48E8E0057A4A7 /* View.swift */,
 				4F83D46A270CB93E0056D56D /* CollectionViewCell.swift */,
 			);
-			path = "Corgi UIKit";
+			path = "Extension UIKit";
 			sourceTree = "<group>";
 		};
 		4FAE633326DE90760057A4A7 /* Navigation */ = {
@@ -778,14 +788,6 @@
 				4FAE633426DE91BE0057A4A7 /* MainVIewModel.swift */,
 			);
 			path = Navigation;
-			sourceTree = "<group>";
-		};
-		4FAE633F26DFE9C40057A4A7 /* Dependency */ = {
-			isa = PBXGroup;
-			children = (
-				4FAE633B26DFE3F60057A4A7 /* CategoryDependencyContainer.swift */,
-			);
-			path = Dependency;
 			sourceTree = "<group>";
 		};
 		4FAE634026DFEBE90057A4A7 /* Navigator */ = {
@@ -802,20 +804,11 @@
 			isa = PBXGroup;
 			children = (
 				4F83D471270E0F3F0056D56D /* Pasteboard */,
-				4FAE632226DE8EBB0057A4A7 /* Dependency Container */,
 				4F83D464270C6E590056D56D /* View */,
 				4F83D47A27100D310056D56D /* Main Part */,
 				4F83D47B27100D520056D56D /* Sub Part */,
 			);
 			path = "User Interface";
-			sourceTree = "<group>";
-		};
-		4FAE634A26DFF14F0057A4A7 /* Dependency */ = {
-			isa = PBXGroup;
-			children = (
-				4FAE634B26DFF15A0057A4A7 /* HomeDependencyContainer.swift */,
-			);
-			path = Dependency;
 			sourceTree = "<group>";
 		};
 		4FAE634D26DFF49F0057A4A7 /* Addition */ = {
@@ -826,14 +819,6 @@
 				4FAE635026DFF53B0057A4A7 /* AdditionViewModel.swift */,
 			);
 			path = Addition;
-			sourceTree = "<group>";
-		};
-		4FAE635226E287240057A4A7 /* Dependency */ = {
-			isa = PBXGroup;
-			children = (
-				4FAE633926DFE3A20057A4A7 /* BookmarkDependencyContainer.swift */,
-			);
-			path = Dependency;
 			sourceTree = "<group>";
 		};
 		4FAE636026E3C8E00057A4A7 /* Model */ = {
@@ -902,13 +887,13 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		4FAE637B26E51EEE0057A4A7 /* Corgi Foundation */ = {
+		4FAE637B26E51EEE0057A4A7 /* Extension Foundation */ = {
 			isa = PBXGroup;
 			children = (
 				4F8CE02527247350000E6E4B /* LocalizedString.swift */,
 				4FAE637E26E521680057A4A7 /* Extension */,
 			);
-			path = "Corgi Foundation";
+			path = "Extension Foundation";
 			sourceTree = "<group>";
 		};
 		4FAE637E26E521680057A4A7 /* Extension */ = {
@@ -963,7 +948,6 @@
 		4FF0102626F4F938009CABCC /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				4FF0103326F7184D009CABCC /* Dependency */,
 				4FF0103626F8EDB6009CABCC /* View */,
 				4FF0102726F4F95A009CABCC /* SettingsViewController.swift */,
 				4FF0103B26F8EE35009CABCC /* SettingsViewModel.swift */,
@@ -977,14 +961,6 @@
 				4FF0102E26F643A3009CABCC /* UIImagerLoader.swift */,
 			);
 			path = UIImageLoader;
-			sourceTree = "<group>";
-		};
-		4FF0103326F7184D009CABCC /* Dependency */ = {
-			isa = PBXGroup;
-			children = (
-				4FF0103426F71857009CABCC /* SettingsDependencyContainer.swift */,
-			);
-			path = Dependency;
 			sourceTree = "<group>";
 		};
 		4FF0103626F8EDB6009CABCC /* View */ = {
