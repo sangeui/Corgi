@@ -359,6 +359,34 @@
 			path = "Custom Presentation";
 			sourceTree = "<group>";
 		};
+		4F3F5D33272672D600164F3F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4F3F5D35272672F300164F3F /* Bookmarks */,
+				4F3F5D34272672E200164F3F /* Appearance */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		4F3F5D34272672E200164F3F /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				4FF0103126F716E2009CABCC /* AppearanceManager.swift */,
+			);
+			path = Appearance;
+			sourceTree = "<group>";
+		};
+		4F3F5D35272672F300164F3F /* Bookmarks */ = {
+			isa = PBXGroup;
+			children = (
+				4FAE636A26E3CA920057A4A7 /* BookmarkConverter */,
+				4FAE636326E3C8F30057A4A7 /* Error */,
+				4FAE636026E3C8E00057A4A7 /* Model */,
+				4FAE635E26E3C15E0057A4A7 /* StorageManager.swift */,
+			);
+			path = Bookmarks;
+			sourceTree = "<group>";
+		};
 		4F4C1731272097C600A99CB4 /* Guide */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,13 +560,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4F8AB8292704ADF9001B82DF /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
 		4F8AB85327065D63001B82DF /* Navigator */ = {
 			isa = PBXGroup;
 			children = (
@@ -672,8 +693,7 @@
 				4F8AB8492704DC14001B82DF /* Corgi.entitlements */,
 				4F8CE02227246CE5000E6E4B /* Localizations */,
 				4F1711BD271EF873000AC173 /* Design */,
-				4FAE634626DFEE7C0057A4A7 /* Entity */,
-				4FAE635D26E3C1190057A4A7 /* Use Case */,
+				4F3F5D33272672D600164F3F /* Manager */,
 				4FAE637B26E51EEE0057A4A7 /* Corgi Foundation */,
 				4FAE632E26DE8FC80057A4A7 /* Corgi UIKit */,
 				4FAE634526DFEE420057A4A7 /* User Interface */,
@@ -790,23 +810,6 @@
 			path = "User Interface";
 			sourceTree = "<group>";
 		};
-		4FAE634626DFEE7C0057A4A7 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				4FAE634726DFF0490057A4A7 /* Repository */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		4FAE634726DFF0490057A4A7 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				4F8AB8292704ADF9001B82DF /* Protocol */,
-				4FAE635A26E3BF4A0057A4A7 /* Model */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
 		4FAE634A26DFF14F0057A4A7 /* Dependency */ = {
 			isa = PBXGroup;
 			children = (
@@ -833,26 +836,10 @@
 			path = Dependency;
 			sourceTree = "<group>";
 		};
-		4FAE635A26E3BF4A0057A4A7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				4FAE635B26E3BF530057A4A7 /* Bookmark.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4FAE635D26E3C1190057A4A7 /* Use Case */ = {
-			isa = PBXGroup;
-			children = (
-				4FF0103026F716D4009CABCC /* AppearanceManager */,
-				4FAE636926E3CA4B0057A4A7 /* BookmarkManager */,
-			);
-			path = "Use Case";
-			sourceTree = "<group>";
-		};
 		4FAE636026E3C8E00057A4A7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4FAE635B26E3BF530057A4A7 /* Bookmark.swift */,
 				4FAE636126E3C8E50057A4A7 /* UnfinishedBookmark.swift */,
 			);
 			path = Model;
@@ -872,17 +859,6 @@
 				4FAE636726E3C9930057A4A7 /* ConvertingBookmarkProtocol.swift */,
 			);
 			path = Protocol;
-			sourceTree = "<group>";
-		};
-		4FAE636926E3CA4B0057A4A7 /* BookmarkManager */ = {
-			isa = PBXGroup;
-			children = (
-				4FAE636A26E3CA920057A4A7 /* BookmarkConverter */,
-				4FAE636326E3C8F30057A4A7 /* Error */,
-				4FAE636026E3C8E00057A4A7 /* Model */,
-				4FAE635E26E3C15E0057A4A7 /* StorageManager.swift */,
-			);
-			path = BookmarkManager;
 			sourceTree = "<group>";
 		};
 		4FAE636A26E3CA920057A4A7 /* BookmarkConverter */ = {
@@ -1001,14 +977,6 @@
 				4FF0102E26F643A3009CABCC /* UIImagerLoader.swift */,
 			);
 			path = UIImageLoader;
-			sourceTree = "<group>";
-		};
-		4FF0103026F716D4009CABCC /* AppearanceManager */ = {
-			isa = PBXGroup;
-			children = (
-				4FF0103126F716E2009CABCC /* AppearanceManager.swift */,
-			);
-			path = AppearanceManager;
 			sourceTree = "<group>";
 		};
 		4FF0103326F7184D009CABCC /* Dependency */ = {
