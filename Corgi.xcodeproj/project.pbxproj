@@ -27,6 +27,15 @@
 		4F776929271B0EA3009D2C5F /* BookmarksRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F776927271B0EA2009D2C5F /* BookmarksRoundView.swift */; };
 		4F77692A271B0EA3009D2C5F /* BookmarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F776928271B0EA3009D2C5F /* BookmarksView.swift */; };
 		4F77692C271BDAD1009D2C5F /* Extension+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F77692B271BDAD1009D2C5F /* Extension+Comparable.swift */; };
+		4F7C1B92272C665E00B55C15 /* BookmarkUseCaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1B91272C665E00B55C15 /* BookmarkUseCaseInteractor.swift */; };
+		4F7C1B94272C668300B55C15 /* BookmarkUseCaseInputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1B93272C668300B55C15 /* BookmarkUseCaseInputBoundary.swift */; };
+		4F7C1B96272C66A600B55C15 /* BookmarkUseCaseOutputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1B95272C66A600B55C15 /* BookmarkUseCaseOutputBoundary.swift */; };
+		4F7C1B98272C672F00B55C15 /* GroupUseCaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1B97272C672F00B55C15 /* GroupUseCaseInteractor.swift */; };
+		4F7C1B9A272C674300B55C15 /* GroupUseCaseInputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1B99272C674300B55C15 /* GroupUseCaseInputBoundary.swift */; };
+		4F7C1B9C272C675500B55C15 /* GroupUseCaseOutputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1B9B272C675500B55C15 /* GroupUseCaseOutputBoundary.swift */; };
+		4F7C1B9E272C677100B55C15 /* AppearanceUseCaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1B9D272C677100B55C15 /* AppearanceUseCaseInteractor.swift */; };
+		4F7C1BA0272C678500B55C15 /* AppearanceUseCaseInputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1B9F272C678500B55C15 /* AppearanceUseCaseInputBoundary.swift */; };
+		4F7C1BA2272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BA1272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift */; };
 		4F83D466270C6F500056D56D /* CorgiGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D465270C6F500056D56D /* CorgiGuideView.swift */; };
 		4F83D469270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D468270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift */; };
 		4F83D46B270CB93E0056D56D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D46A270CB93E0056D56D /* CollectionViewCell.swift */; };
@@ -188,6 +197,15 @@
 		4F776927271B0EA2009D2C5F /* BookmarksRoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksRoundView.swift; sourceTree = "<group>"; };
 		4F776928271B0EA3009D2C5F /* BookmarksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksView.swift; sourceTree = "<group>"; };
 		4F77692B271BDAD1009D2C5F /* Extension+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Comparable.swift"; sourceTree = "<group>"; };
+		4F7C1B91272C665E00B55C15 /* BookmarkUseCaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkUseCaseInteractor.swift; sourceTree = "<group>"; };
+		4F7C1B93272C668300B55C15 /* BookmarkUseCaseInputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkUseCaseInputBoundary.swift; sourceTree = "<group>"; };
+		4F7C1B95272C66A600B55C15 /* BookmarkUseCaseOutputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkUseCaseOutputBoundary.swift; sourceTree = "<group>"; };
+		4F7C1B97272C672F00B55C15 /* GroupUseCaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupUseCaseInteractor.swift; sourceTree = "<group>"; };
+		4F7C1B99272C674300B55C15 /* GroupUseCaseInputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupUseCaseInputBoundary.swift; sourceTree = "<group>"; };
+		4F7C1B9B272C675500B55C15 /* GroupUseCaseOutputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupUseCaseOutputBoundary.swift; sourceTree = "<group>"; };
+		4F7C1B9D272C677100B55C15 /* AppearanceUseCaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceUseCaseInteractor.swift; sourceTree = "<group>"; };
+		4F7C1B9F272C678500B55C15 /* AppearanceUseCaseInputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceUseCaseInputBoundary.swift; sourceTree = "<group>"; };
+		4F7C1BA1272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceUseCaseOutputBoundary.swift; sourceTree = "<group>"; };
 		4F83D465270C6F500056D56D /* CorgiGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorgiGuideView.swift; sourceTree = "<group>"; };
 		4F83D468270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorgiGuideVerticalTextStackView.swift; sourceTree = "<group>"; };
 		4F83D46A270CB93E0056D56D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -427,6 +445,53 @@
 				4F77692127189132009D2C5F /* SubNavigationController.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		4F7C1B8C272C65E800B55C15 /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				4F7C1B90272C664200B55C15 /* Appearance Use Case */,
+				4F7C1B8E272C662B00B55C15 /* Bookmark Use Case */,
+				4F7C1B8F272C663200B55C15 /* Group Use Case */,
+			);
+			path = "Use Cases";
+			sourceTree = "<group>";
+		};
+		4F7C1B8D272C65F300B55C15 /* Interface Adapters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Interface Adapters";
+			sourceTree = "<group>";
+		};
+		4F7C1B8E272C662B00B55C15 /* Bookmark Use Case */ = {
+			isa = PBXGroup;
+			children = (
+				4F7C1B91272C665E00B55C15 /* BookmarkUseCaseInteractor.swift */,
+				4F7C1B93272C668300B55C15 /* BookmarkUseCaseInputBoundary.swift */,
+				4F7C1B95272C66A600B55C15 /* BookmarkUseCaseOutputBoundary.swift */,
+			);
+			path = "Bookmark Use Case";
+			sourceTree = "<group>";
+		};
+		4F7C1B8F272C663200B55C15 /* Group Use Case */ = {
+			isa = PBXGroup;
+			children = (
+				4F7C1B97272C672F00B55C15 /* GroupUseCaseInteractor.swift */,
+				4F7C1B99272C674300B55C15 /* GroupUseCaseInputBoundary.swift */,
+				4F7C1B9B272C675500B55C15 /* GroupUseCaseOutputBoundary.swift */,
+			);
+			path = "Group Use Case";
+			sourceTree = "<group>";
+		};
+		4F7C1B90272C664200B55C15 /* Appearance Use Case */ = {
+			isa = PBXGroup;
+			children = (
+				4F7C1B9D272C677100B55C15 /* AppearanceUseCaseInteractor.swift */,
+				4F7C1B9F272C678500B55C15 /* AppearanceUseCaseInputBoundary.swift */,
+				4F7C1BA1272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift */,
+			);
+			path = "Appearance Use Case";
 			sourceTree = "<group>";
 		};
 		4F83D464270C6E590056D56D /* View */ = {
@@ -675,6 +740,8 @@
 		4FAE630D26DE8DC20057A4A7 /* Corgi */ = {
 			isa = PBXGroup;
 			children = (
+				4F7C1B8C272C65E800B55C15 /* Use Cases */,
+				4F7C1B8D272C65F300B55C15 /* Interface Adapters */,
 				4F8AB8492704DC14001B82DF /* Corgi.entitlements */,
 				4F1711BD271EF873000AC173 /* Design */,
 				4F8CE02227246CE5000E6E4B /* Localization */,
@@ -1109,6 +1176,7 @@
 				4F8CE02627247350000E6E4B /* LocalizedString.swift in Sources */,
 				4F8AB898270AE224001B82DF /* BookmarksViewController.swift in Sources */,
 				4F7769242719B4A1009D2C5F /* DimmingClosePresentationController.swift in Sources */,
+				4F7C1B94272C668300B55C15 /* BookmarkUseCaseInputBoundary.swift in Sources */,
 				4FFF0DD927038C1A00F659A2 /* Bookmark.swift in Sources */,
 				4F83D46B270CB93E0056D56D /* CollectionViewCell.swift in Sources */,
 				4FAE633E26DFE8AA0057A4A7 /* GroupsViewModel.swift in Sources */,
@@ -1135,6 +1203,7 @@
 				4FF0101B26EFBB14009CABCC /* AdditionView.swift in Sources */,
 				4F4C1730272097BA00A99CB4 /* HomeToolbar.swift in Sources */,
 				4FAE633826DE95240057A4A7 /* HomeViewModel.swift in Sources */,
+				4F7C1B9E272C677100B55C15 /* AppearanceUseCaseInteractor.swift in Sources */,
 				4FF0102C26F6296C009CABCC /* BookmarkTableViewCell.swift in Sources */,
 				4F1711C0271EF9A1000AC173 /* Color.swift in Sources */,
 				4FF0101826EFB9DD009CABCC /* Extension+FloatingPoint.swift in Sources */,
@@ -1145,6 +1214,7 @@
 				4F1711C2271F1721000AC173 /* DisabledMessageLabel.swift in Sources */,
 				4FAE633C26DFE3F60057A4A7 /* CategoryDependencyContainer.swift in Sources */,
 				4FAE637626E511920057A4A7 /* HomaNavigator.swift in Sources */,
+				4F7C1BA0272C678500B55C15 /* AppearanceUseCaseInputBoundary.swift in Sources */,
 				4FAE637126E48E630057A4A7 /* HomeView.swift in Sources */,
 				4FAE638A26E52DD30057A4A7 /* CornerRadiusViewDecorator.swift in Sources */,
 				4F2C746927020E390095B661 /* DynamicHeightPresentationController.swift in Sources */,
@@ -1161,6 +1231,7 @@
 				4F8CE01F27240435000E6E4B /* BookmarkToolbar.swift in Sources */,
 				4FAE631326DE8DC20057A4A7 /* MainNavigationController.swift in Sources */,
 				4F1711C4271F1928000AC173 /* HomeTableView.swift in Sources */,
+				4F7C1B98272C672F00B55C15 /* GroupUseCaseInteractor.swift in Sources */,
 				4F8AB85527065D7C001B82DF /* ShareNavigator.swift in Sources */,
 				4FAE630F26DE8DC20057A4A7 /* AppDelegate.swift in Sources */,
 				4FAE637A26E51D800057A4A7 /* Extension+UIView.swift in Sources */,
@@ -1172,6 +1243,7 @@
 				4F83D469270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift in Sources */,
 				4FAE636226E3C8E50057A4A7 /* UnfinishedBookmark.swift in Sources */,
 				4F83D466270C6F500056D56D /* CorgiGuideView.swift in Sources */,
+				4F7C1BA2272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift in Sources */,
 				4FF0102A26F4F9A1009CABCC /* SettingsNavigator.swift in Sources */,
 				4F77692C271BDAD1009D2C5F /* Extension+Comparable.swift in Sources */,
 				4FAE633226DE902E0057A4A7 /* NavigationController.swift in Sources */,
@@ -1180,6 +1252,7 @@
 				4FF0101626EE682D009CABCC /* NeumorphicButton.swift in Sources */,
 				4FAE635F26E3C15E0057A4A7 /* StorageManager.swift in Sources */,
 				4FAE636C26E3CAA20057A4A7 /* BookmarkConverter.swift in Sources */,
+				4F7C1B9A272C674300B55C15 /* GroupUseCaseInputBoundary.swift in Sources */,
 				4F8AB87D2708ADF8001B82DF /* GroupsView.swift in Sources */,
 				4FAE635126DFF53B0057A4A7 /* AdditionViewModel.swift in Sources */,
 				4F8AB87F2708AE66001B82DF /* GroupCell.swift in Sources */,
@@ -1190,6 +1263,7 @@
 				4FAE638026E521D90057A4A7 /* Extension+NSLayoutConstraint.swift in Sources */,
 				4FF0103526F71857009CABCC /* SettingsDependencyContainer.swift in Sources */,
 				4FAE638E26E541B20057A4A7 /* Toolbar.swift in Sources */,
+				4F7C1B92272C665E00B55C15 /* BookmarkUseCaseInteractor.swift in Sources */,
 				4F83D48427100FE00056D56D /* GroupSelectView.swift in Sources */,
 				4FAE632B26DE8F0F0057A4A7 /* GroupsViewController.swift in Sources */,
 				4FAE633526DE91BE0057A4A7 /* MainVIewModel.swift in Sources */,
@@ -1198,8 +1272,10 @@
 				4FF0102F26F643A3009CABCC /* UIImagerLoader.swift in Sources */,
 				4F8CE01B2723E337000E6E4B /* SettingTableViewCell.swift in Sources */,
 				4FAE633026DE8FD70057A4A7 /* ViewController.swift in Sources */,
+				4F7C1B96272C66A600B55C15 /* BookmarkUseCaseOutputBoundary.swift in Sources */,
 				4FAE634F26DFF5250057A4A7 /* AdditionViewController.swift in Sources */,
 				4F77692A271B0EA3009D2C5F /* BookmarksView.swift in Sources */,
+				4F7C1B9C272C675500B55C15 /* GroupUseCaseOutputBoundary.swift in Sources */,
 				4FAE631126DE8DC20057A4A7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
