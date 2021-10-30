@@ -50,7 +50,7 @@ extension HomeBookmarks: UITableViewDataSource {
         guard let cell = tableView.dequeue(identifier: "Cell", for: indexPath) as? BookmarkTableViewCell else { return .init() }
         cell.urlString = bookmark.url.absoluteString.removingPercentEncoding
         cell.urlCategory = bookmark.group
-        cell.urlDescription = bookmark.explanation
+        cell.urlDescription = bookmark.comment
         cell.isHiddenCircleView = bookmark.isOpened
         
         if bookmark.url.favicon.isNotNil {

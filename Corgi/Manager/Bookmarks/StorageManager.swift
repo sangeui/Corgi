@@ -65,7 +65,7 @@ class StorageManager {
 
 private extension Bookmark {
     func convert() -> BookmarkRM {
-        return .init(url: self.url, group: self.group, description: self.explanation, identifier: self.identifier, dateCreated: self.created, isOpened: self.isOpened)
+        return .init(url: self.url, group: self.group, description: self.comment, identifier: self.identifier, dateCreated: self.created, isOpened: self.isOpened)
     }
 }
 
@@ -77,7 +77,7 @@ extension Bookmark: Comparable {
 
 private extension BookmarkRM {
     func convert() -> Bookmark {
-        return .init(url: self.url, group: self.group, explanation: self.description, identifier: self.identifier, created: self.dateCreated, isOpened: self.isOpened)
+        return .init(url: self.url, group: self.group, comment: self.description, identifier: self.identifier, created: self.dateCreated, isOpened: self.isOpened)
     }
 }
 

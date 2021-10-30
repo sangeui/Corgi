@@ -73,18 +73,18 @@ private extension BookmarkUseCaseInteractor {
 
 private extension BookmarkUseCaseInteractor {
     func prepare(url: URL, comment: String, group: String) -> Bookmark {
-        return .init(url: url, group: group, explanation: comment, identifier: .init(), created: .init(), isOpened: false)
+        return .init(url: url, group: group, comment: comment, identifier: .init(), created: .init(), isOpened: false)
     }
 }
 
 private extension Bookmark {
     func toDataAccessModel() -> BookmarkRM {
-        return .init(url: self.url, group: self.group, description: self.explanation, identifier: self.identifier, dateCreated: self.created, isOpened: self.isOpened)
+        return .init(url: self.url, group: self.group, description: self.comment, identifier: self.identifier, dateCreated: self.created, isOpened: self.isOpened)
     }
 }
 
 private extension BookmarkRM {
     func toUseCaseModel() -> Bookmark {
-        return .init(url: self.url, group: self.group, explanation: self.description, identifier: self.identifier, created: self.dateCreated, isOpened: self.isOpened)
+        return .init(url: self.url, group: self.group, comment: self.description, identifier: self.identifier, created: self.dateCreated, isOpened: self.isOpened)
     }
 }

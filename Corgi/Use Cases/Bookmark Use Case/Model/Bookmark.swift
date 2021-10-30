@@ -12,7 +12,7 @@ public typealias Bookmarks = [Bookmark]
 public struct Bookmark: Equatable {
     var url: URL
     var group: String?
-    var explanation: String?
+    var comment: String?
     var identifier: UUID
     var created: Date
     var isOpened: Bool

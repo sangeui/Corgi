@@ -17,7 +17,7 @@ class BookmarkConverter: ConvertingBookmarkProtocol {
         
         return .init(url: bookmarkAddress,
                      group: bookmarkCategory,
-                     explanation: bookmarkDescription,
+                     comment: bookmarkDescription,
                      identifier: .init(),
                      created: .init(),
                      isOpened: false)

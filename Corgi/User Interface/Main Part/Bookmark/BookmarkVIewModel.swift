@@ -46,7 +46,7 @@ class BookmarkViewModel {
     }
     
     func bookmarkDescription() -> String? {
-        return self.bookamrk.explanation
+        return self.bookamrk.comment
     }
 }
 

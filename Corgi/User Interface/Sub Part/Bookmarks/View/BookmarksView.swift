@@ -59,7 +59,7 @@ extension BookmarksView: UITableViewDataSource {
         let bookmark = self.viewModel.bookmarks[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? BookmarkTableViewCell ?? .init()
         cell.urlString = bookmark.url.absoluteString
-        cell.urlDescription = bookmark.explanation
+        cell.urlDescription = bookmark.comment
         cell.isHiddenCircleView = bookmark.isOpened
         
         let url = bookmark.url
