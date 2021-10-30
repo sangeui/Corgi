@@ -36,6 +36,7 @@
 		4F7C1B9E272C677100B55C15 /* AppearanceUseCaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1B9D272C677100B55C15 /* AppearanceUseCaseInteractor.swift */; };
 		4F7C1BA0272C678500B55C15 /* AppearanceUseCaseInputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1B9F272C678500B55C15 /* AppearanceUseCaseInputBoundary.swift */; };
 		4F7C1BA2272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BA1272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift */; };
+		4F7C1BA6272C722400B55C15 /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BA5272C722400B55C15 /* ValidationRule.swift */; };
 		4F83D466270C6F500056D56D /* CorgiGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D465270C6F500056D56D /* CorgiGuideView.swift */; };
 		4F83D469270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D468270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift */; };
 		4F83D46B270CB93E0056D56D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D46A270CB93E0056D56D /* CollectionViewCell.swift */; };
@@ -206,6 +207,7 @@
 		4F7C1B9D272C677100B55C15 /* AppearanceUseCaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceUseCaseInteractor.swift; sourceTree = "<group>"; };
 		4F7C1B9F272C678500B55C15 /* AppearanceUseCaseInputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceUseCaseInputBoundary.swift; sourceTree = "<group>"; };
 		4F7C1BA1272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceUseCaseOutputBoundary.swift; sourceTree = "<group>"; };
+		4F7C1BA5272C722400B55C15 /* ValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
 		4F83D465270C6F500056D56D /* CorgiGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorgiGuideView.swift; sourceTree = "<group>"; };
 		4F83D468270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorgiGuideVerticalTextStackView.swift; sourceTree = "<group>"; };
 		4F83D46A270CB93E0056D56D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 		4F7C1B8C272C65E800B55C15 /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				4F7C1BA4272C720A00B55C15 /* Other Use Cases */,
 				4F7C1B90272C664200B55C15 /* Appearance Use Case */,
 				4F7C1B8E272C662B00B55C15 /* Bookmark Use Case */,
 				4F7C1B8F272C663200B55C15 /* Group Use Case */,
@@ -492,6 +495,22 @@
 				4F7C1BA1272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift */,
 			);
 			path = "Appearance Use Case";
+			sourceTree = "<group>";
+		};
+		4F7C1BA3272C71F900B55C15 /* Validation Rule */ = {
+			isa = PBXGroup;
+			children = (
+				4F7C1BA5272C722400B55C15 /* ValidationRule.swift */,
+			);
+			path = "Validation Rule";
+			sourceTree = "<group>";
+		};
+		4F7C1BA4272C720A00B55C15 /* Other Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				4F7C1BA3272C71F900B55C15 /* Validation Rule */,
+			);
+			path = "Other Use Cases";
 			sourceTree = "<group>";
 		};
 		4F83D464270C6E590056D56D /* View */ = {
@@ -1234,6 +1253,7 @@
 				4F7C1B98272C672F00B55C15 /* GroupUseCaseInteractor.swift in Sources */,
 				4F8AB85527065D7C001B82DF /* ShareNavigator.swift in Sources */,
 				4FAE630F26DE8DC20057A4A7 /* AppDelegate.swift in Sources */,
+				4F7C1BA6272C722400B55C15 /* ValidationRule.swift in Sources */,
 				4FAE637A26E51D800057A4A7 /* Extension+UIView.swift in Sources */,
 				4F83D46D270CBDC50056D56D /* Extension+UICollectionView.swift in Sources */,
 				4FF0102826F4F95A009CABCC /* SettingsViewController.swift in Sources */,
