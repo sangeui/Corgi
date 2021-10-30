@@ -38,6 +38,7 @@
 		4F7C1BA2272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BA1272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift */; };
 		4F7C1BA6272C722400B55C15 /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BA5272C722400B55C15 /* ValidationRule.swift */; };
 		4F7C1BAA272D0F5300B55C15 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BA9272D0F5300B55C15 /* Group.swift */; };
+		4F7C1BAD272DBED800B55C15 /* BookmarkAccessInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BAC272DBED800B55C15 /* BookmarkAccessInterface.swift */; };
 		4F83D466270C6F500056D56D /* CorgiGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D465270C6F500056D56D /* CorgiGuideView.swift */; };
 		4F83D469270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D468270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift */; };
 		4F83D46B270CB93E0056D56D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D46A270CB93E0056D56D /* CollectionViewCell.swift */; };
@@ -210,6 +211,7 @@
 		4F7C1BA1272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceUseCaseOutputBoundary.swift; sourceTree = "<group>"; };
 		4F7C1BA5272C722400B55C15 /* ValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
 		4F7C1BA9272D0F5300B55C15 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		4F7C1BAC272DBED800B55C15 /* BookmarkAccessInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkAccessInterface.swift; sourceTree = "<group>"; };
 		4F83D465270C6F500056D56D /* CorgiGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorgiGuideView.swift; sourceTree = "<group>"; };
 		4F83D468270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorgiGuideVerticalTextStackView.swift; sourceTree = "<group>"; };
 		4F83D46A270CB93E0056D56D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 		4F7C1B8C272C65E800B55C15 /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				4F7C1BAB272DBE6700B55C15 /* Data Access Interface */,
 				4F7C1BA4272C720A00B55C15 /* Other Use Cases */,
 				4F7C1B90272C664200B55C15 /* Appearance Use Case */,
 				4F7C1B8E272C662B00B55C15 /* Bookmark Use Case */,
@@ -531,6 +534,14 @@
 				4F7C1BA9272D0F5300B55C15 /* Group.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4F7C1BAB272DBE6700B55C15 /* Data Access Interface */ = {
+			isa = PBXGroup;
+			children = (
+				4F7C1BAC272DBED800B55C15 /* BookmarkAccessInterface.swift */,
+			);
+			path = "Data Access Interface";
 			sourceTree = "<group>";
 		};
 		4F83D464270C6E590056D56D /* View */ = {
@@ -1211,6 +1222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F7C1BAD272DBED800B55C15 /* BookmarkAccessInterface.swift in Sources */,
 				4F8CE02627247350000E6E4B /* LocalizedString.swift in Sources */,
 				4F8AB898270AE224001B82DF /* BookmarksViewController.swift in Sources */,
 				4F7769242719B4A1009D2C5F /* DimmingClosePresentationController.swift in Sources */,
