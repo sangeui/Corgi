@@ -11,10 +11,10 @@ import CorgiStorage
 class BookmarkUseCaseInteractor {
     weak var outputBoundary: BookmarkUseCaseOutputBoundary? = nil
     
-    private let dataAccessInterface: CoreDataInterface
+    private let dataAccessInterface: BookmarkAccessInterface
     private let validator: ValidationRule = .init()
     
-    init(dataAccessInterface: CoreDataInterface) {
+    init(dataAccessInterface: BookmarkAccessInterface) {
         self.dataAccessInterface = dataAccessInterface
     }
 }
@@ -35,17 +35,17 @@ extension BookmarkUseCaseInteractor: BookmarkUseCaseInputBoundary {
     }
     
     func read() {
-        let bookmarks = self.sort(bookmarks: self.dataAccessInterface.readBookmarks(predicate: nil, sort: nil))
+        let bookmarks = self.sort(bookmarks: self.dataAccessInterface.read(predicate: nil, sort: nil))
         self.outputBoundary?.send(bookmarks: bookmarks)
     }
     
     func read(group: UUID) {
-        let bookmarks = self.sort(bookmarks: self.dataAccessInterface.readBookmarks(predicate: nil, sort: nil))
+        let bookmarks = self.sort(bookmarks: self.dataAccessInterface.read(group: group))
         self.outputBoundary?.send(bookmarks: bookmarks)
     }
     
     func update(bookmark: Bookmark) {
-        if self.dataAccessInterface.updateBookmark(bookmark.toDataAccessModel()) {
+        if self.dataAccessInterface.update(bookmark: bookmark.toDataAccessModel()) {
             self.outputBoundary?.message(.success(.update()))
         } else {
             self.outputBoundary?.message(.failure(.update()))
@@ -53,7 +53,7 @@ extension BookmarkUseCaseInteractor: BookmarkUseCaseInputBoundary {
     }
     
     func delete(_ uuid: UUID) {
-        if self.dataAccessInterface.deleteBookmark(uuid) {
+        if self.dataAccessInterface.delete(uuid: uuid) {
             self.outputBoundary?.message(.success(.delete()))
         } else {
             self.outputBoundary?.message(.failure(.delete()))
@@ -63,7 +63,7 @@ extension BookmarkUseCaseInteractor: BookmarkUseCaseInputBoundary {
 
 private extension BookmarkUseCaseInteractor {
     func send(bookmark: Bookmark) -> Bool {
-        return self.dataAccessInterface.createBookmark(bookmark.toDataAccessModel())
+        return self.dataAccessInterface.create(bookmark.toDataAccessModel())
     }
     
     func sort(bookmarks: [BookmarkRM]) -> [Bookmark] {
