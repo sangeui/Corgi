@@ -8,5 +8,9 @@
 import Foundation
 
 protocol BookmarkUseCaseInputBoundary {
-    
+    func create(url: String, comment: String, group: String)
+    func read()
+    func read(group: UUID)
+    func update(bookmark: Bookmark)
+    func delete(_ uuid: UUID)
 }

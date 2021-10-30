@@ -7,6 +7,19 @@
 
 import Foundation
 
-protocol BookmarkUseCaseOutputBoundary {
-    
+enum BookmarkUseCaseMessage {
+    case success(BookmarkUseCase)
+    case failure(BookmarkUseCase)
+}
+
+enum BookmarkUseCase {
+    case create(String? = nil),
+         read(String? = nil),
+         update(String? = nil),
+         delete(String? = nil)
+}
+
+protocol BookmarkUseCaseOutputBoundary: AnyObject {
+    func send(bookmarks: [Bookmark])
+    func message(_ message: BookmarkUseCaseMessage)
 }
