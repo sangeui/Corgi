@@ -20,7 +20,6 @@ class HomeDependencyContainer {
         let viewModel: HomeViewModel = self.createHomeViewModel()
         let addition = { (bookmark: UnfinishedBookmark?) in
             return self.createAdditionViewController(homeNavigator: viewModel,
-                                                     unstoredBookmarkHandler: viewModel,
                                                      unstoredBookmark: bookmark) }
         
         return .init(viewModel: viewModel,
@@ -38,21 +37,17 @@ private extension HomeDependencyContainer {
 
 private extension HomeDependencyContainer {
     func createAdditionViewController(homeNavigator: HomeNavigator,
-                                      unstoredBookmarkHandler: UnstoredBookmarkHandler,
                                       unstoredBookmark: UnfinishedBookmark?) -> AdditionViewController {
         let viewModel: AdditionViewModel = self.createAdditionViewModel(homeNavigator: homeNavigator,
-                                                                        unstoredBookmarkHandler: unstoredBookmarkHandler,
                                                                         unstoredBookmark: unstoredBookmark)
         return .init(viewModel: viewModel,
                      homeNavigator: homeNavigator)
     }
     
     func createAdditionViewModel(homeNavigator: HomeNavigator,
-                                 unstoredBookmarkHandler: UnstoredBookmarkHandler,
                                  unstoredBookmark: UnfinishedBookmark?) -> AdditionViewModel {
         return .init(bookmarkManager: self.bookmarkManager,
                      homeNavigator: homeNavigator,
-                     unstoredBookmarkHandler: unstoredBookmarkHandler,
                      unstoredBookmark: unstoredBookmark)
     }
 }

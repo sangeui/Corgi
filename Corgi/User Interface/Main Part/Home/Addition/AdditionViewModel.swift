@@ -17,7 +17,6 @@ class AdditionViewModel {
     
     private let bookmarkManager: StorageManager
     private let homeNavigator: HomeNavigator
-    private let unstoredBookmarkHandler: UnstoredBookmarkHandler
     
     private var enteredURLtext: String = .empty
     private var enteredCategory: String = .empty
@@ -25,16 +24,10 @@ class AdditionViewModel {
     
     init(bookmarkManager: StorageManager,
          homeNavigator: HomeNavigator,
-         unstoredBookmarkHandler: UnstoredBookmarkHandler,
          unstoredBookmark: UnfinishedBookmark?) {
         self.bookmarkManager = bookmarkManager
         self.homeNavigator = homeNavigator
         self.unfinishedBookmark = unstoredBookmark
-        self.unstoredBookmarkHandler = unstoredBookmarkHandler
-    }
-    
-    func notifyUnstoredBookmark(bookmark: UnfinishedBookmark) {
-        self.unstoredBookmarkHandler.haveUnstoredBookmark(bookmark)
     }
     
     func userDidEnterURLtext(urlText: String) {

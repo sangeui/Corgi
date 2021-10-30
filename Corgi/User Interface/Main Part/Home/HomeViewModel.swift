@@ -9,10 +9,6 @@ import Foundation
 import OSLog
 import CorgiStorage
 
-protocol UnstoredBookmarkHandler {
-    func haveUnstoredBookmark(_ bookmark: UnfinishedBookmark)
-}
-
 enum HomeViewType: Equatable {
     case home, addition(UnfinishedBookmark?)
 }
@@ -92,12 +88,6 @@ class HomeViewModel {
 extension HomeViewModel: HomeNavigator {
     func navigateToHome() {
         self.showingAdditionView = .home
-    }
-}
-
-extension HomeViewModel: UnstoredBookmarkHandler {
-    func haveUnstoredBookmark(_ bookmark: UnfinishedBookmark) {
-        self.unstoredBookmark = bookmark
     }
 }
 
