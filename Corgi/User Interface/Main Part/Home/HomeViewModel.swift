@@ -7,6 +7,7 @@
 
 import Foundation
 import OSLog
+import CorgiStorage
 
 protocol UnstoredBookmarkHandler {
     func haveUnstoredBookmark(_ bookmark: UnfinishedBookmark)
@@ -29,17 +30,16 @@ class HomeViewModel {
     private let categoryNavigator: CategoryNavigator
     private let bookmarkNavigator: BookmarkNavigator
     private let settingsNavigator: SettingsNavigator
-    
-    private let bookmarkManager: StorageManager
+    private let bookmarkUseCaseInteractor: BookmarkUseCaseInteractor = .init(dataAccessInterface: CoreDataInterface()!)
     
     init(categoryNavigator: CategoryNavigator,
          bookmarkNavigator: BookmarkNavigator,
-         settingsNavigator: SettingsNavigator,
-         bookmarkManager: StorageManager) {
+         settingsNavigator: SettingsNavigator) {
         self.categoryNavigator = categoryNavigator
         self.bookmarkNavigator = bookmarkNavigator
         self.settingsNavigator = settingsNavigator
-        self.bookmarkManager = bookmarkManager
+        
+        self.bookmarkUseCaseInteractor.outputBoundary = self
     }
     
     @objc func showAdditionView() {
@@ -61,24 +61,19 @@ class HomeViewModel {
     func showBookmarkView(with bookmark: Bookmark) {
         var copiedBookmark = bookmark
         copiedBookmark.isOpened = .yes
-        self.bookmarkManager.update(bookmark: copiedBookmark)
+        self.bookmarkUseCaseInteractor.update(bookmark: copiedBookmark)
         self.bookmarkNavigator.navigateToBookmark(bookmark: bookmark)
     }
     
     @objc func updateBookmarkList() {
-        self.bookmarkList = self.bookmarkManager.readAllBookmarks()
+        self.bookmarkUseCaseInteractor.read()
     }
     
-    @objc func removeBookmark(given row: Int) -> Bool {
+    @objc func removeBookmark(given row: Int) {
         let bookmark = self.bookmarkList[row]
         let identifier = bookmark.identifier
         
-        if self.bookmarkManager.deleteBookmark(given: identifier) {
-            self.bookmarkList.removeAll(where: { $0 == bookmark })
-            return .yes
-        } else {
-            return .no
-        }
+        self.bookmarkUseCaseInteractor.delete(identifier)
     }
     
     func faviconImageURL(of index: Int) -> URL? {
@@ -103,5 +98,24 @@ extension HomeViewModel: HomeNavigator {
 extension HomeViewModel: UnstoredBookmarkHandler {
     func haveUnstoredBookmark(_ bookmark: UnfinishedBookmark) {
         self.unstoredBookmark = bookmark
+    }
+}
+
+extension HomeViewModel: BookmarkUseCaseOutputBoundary {
+    func send(bookmarks: [Bookmark]) {
+        self.bookmarkList = bookmarks
+    }
+    
+    func message(_ message: BookmarkUseCaseMessage) {
+        switch message {
+        case .success(let bookmarkUseCase):
+            switch bookmarkUseCase {
+            case .create(_): break
+            case .read(_): break
+            case .update(_): break
+            case .delete(_): self.bookmarkUseCaseInteractor.read()
+            }
+        case .failure(_): break
+        }
     }
 }

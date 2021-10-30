@@ -32,8 +32,7 @@ private extension HomeDependencyContainer {
     func createHomeViewModel() -> HomeViewModel {
         return .init(categoryNavigator: self.mainViewModel,
                      bookmarkNavigator: self.mainViewModel,
-                     settingsNavigator: self.mainViewModel,
-                     bookmarkManager: self.bookmarkManager)
+                     settingsNavigator: self.mainViewModel)
     }
 }
 

@@ -93,7 +93,7 @@ private extension HomeView {
         view.onRefresh = { [weak self] in self?.viewModel.updateBookmarkList() }
         view.onCommit = { [weak self] (editingStyle, indexPath) in
             if editingStyle == .delete {
-                let _ = self?.viewModel.removeBookmark(given: indexPath.row)
+                self?.viewModel.removeBookmark(given: indexPath.row)
             }
         }
     }
