@@ -17,9 +17,3 @@ public struct Bookmark: Equatable {
     var created: Date
     var isOpened: Bool
 }
-
-public struct Group: Equatable {
-    var identifier: UUID
-    var name: String
-    var count: Int
-}

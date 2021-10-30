@@ -37,6 +37,7 @@
 		4F7C1BA0272C678500B55C15 /* AppearanceUseCaseInputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1B9F272C678500B55C15 /* AppearanceUseCaseInputBoundary.swift */; };
 		4F7C1BA2272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BA1272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift */; };
 		4F7C1BA6272C722400B55C15 /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BA5272C722400B55C15 /* ValidationRule.swift */; };
+		4F7C1BAA272D0F5300B55C15 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BA9272D0F5300B55C15 /* Group.swift */; };
 		4F83D466270C6F500056D56D /* CorgiGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D465270C6F500056D56D /* CorgiGuideView.swift */; };
 		4F83D469270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D468270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift */; };
 		4F83D46B270CB93E0056D56D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D46A270CB93E0056D56D /* CollectionViewCell.swift */; };
@@ -208,6 +209,7 @@
 		4F7C1B9F272C678500B55C15 /* AppearanceUseCaseInputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceUseCaseInputBoundary.swift; sourceTree = "<group>"; };
 		4F7C1BA1272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceUseCaseOutputBoundary.swift; sourceTree = "<group>"; };
 		4F7C1BA5272C722400B55C15 /* ValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
+		4F7C1BA9272D0F5300B55C15 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		4F83D465270C6F500056D56D /* CorgiGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorgiGuideView.swift; sourceTree = "<group>"; };
 		4F83D468270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorgiGuideVerticalTextStackView.swift; sourceTree = "<group>"; };
 		4F83D46A270CB93E0056D56D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 		4F7C1B8E272C662B00B55C15 /* Bookmark Use Case */ = {
 			isa = PBXGroup;
 			children = (
+				4F7C1BA7272D0F3B00B55C15 /* Model */,
 				4F7C1B91272C665E00B55C15 /* BookmarkUseCaseInteractor.swift */,
 				4F7C1B93272C668300B55C15 /* BookmarkUseCaseInputBoundary.swift */,
 				4F7C1B95272C66A600B55C15 /* BookmarkUseCaseOutputBoundary.swift */,
@@ -480,6 +483,7 @@
 		4F7C1B8F272C663200B55C15 /* Group Use Case */ = {
 			isa = PBXGroup;
 			children = (
+				4F7C1BA8272D0F4A00B55C15 /* Model */,
 				4F7C1B97272C672F00B55C15 /* GroupUseCaseInteractor.swift */,
 				4F7C1B99272C674300B55C15 /* GroupUseCaseInputBoundary.swift */,
 				4F7C1B9B272C675500B55C15 /* GroupUseCaseOutputBoundary.swift */,
@@ -511,6 +515,22 @@
 				4F7C1BA3272C71F900B55C15 /* Validation Rule */,
 			);
 			path = "Other Use Cases";
+			sourceTree = "<group>";
+		};
+		4F7C1BA7272D0F3B00B55C15 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4FAE635B26E3BF530057A4A7 /* Bookmark.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4F7C1BA8272D0F4A00B55C15 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F7C1BA9272D0F5300B55C15 /* Group.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4F83D464270C6E590056D56D /* View */ = {
@@ -873,7 +893,6 @@
 		4FAE636026E3C8E00057A4A7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4FAE635B26E3BF530057A4A7 /* Bookmark.swift */,
 				4FAE636126E3C8E50057A4A7 /* UnfinishedBookmark.swift */,
 			);
 			path = Model;
@@ -1209,6 +1228,7 @@
 				4FAE634226DFEBF20057A4A7 /* CategoryNavigator.swift in Sources */,
 				4FAE633A26DFE3A20057A4A7 /* BookmarkDependencyContainer.swift in Sources */,
 				4FF0103226F716E2009CABCC /* AppearanceManager.swift in Sources */,
+				4F7C1BAA272D0F5300B55C15 /* Group.swift in Sources */,
 				4FAE635626E288980057A4A7 /* BookmarkVIewModel.swift in Sources */,
 				4FAE634426DFEC040057A4A7 /* BookmarkNavigator.swift in Sources */,
 				4F8CE021272410DB000E6E4B /* WebView.swift in Sources */,
