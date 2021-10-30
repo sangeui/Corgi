@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import CorgiStorage
 
 class AdditionViewModel {
     typealias CategoryList = [Group]
@@ -15,6 +16,7 @@ class AdditionViewModel {
     @Published public private(set) var categoryList: CategoryList = []
     @Published public private(set) var unfinishedBookmark: UnfinishedBookmark? = nil
     
+    private let bookmarkUseCaseInteractor: BookmarkUseCaseInteractor = .init(dataAccessInterface: CoreDataInterface()!)
     private let bookmarkManager: StorageManager
     private let homeNavigator: HomeNavigator
     
@@ -28,6 +30,8 @@ class AdditionViewModel {
         self.bookmarkManager = bookmarkManager
         self.homeNavigator = homeNavigator
         self.unfinishedBookmark = unstoredBookmark
+        
+        self.bookmarkUseCaseInteractor.outputBoundary = self
     }
     
     func userDidEnterURLtext(urlText: String) {
@@ -50,15 +54,14 @@ class AdditionViewModel {
     }
     
     @objc func userDidTouchSaveButton() {
-        let newBookmark: UnfinishedBookmark = .init(addressString: self.enteredURLtext, description: self.enteredDescription, category: self.enteredCategory)
-        
-        self.bookmarkManager.createNewBookmark(newBookmark) { result in
-            switch result {
-            case .success(_):
-                self.homeNavigator.navigateToHome()
-            case .failure(let error):
-                print(error)
-            }
+        self.bookmarkUseCaseInteractor.create(url: self.enteredURLtext, comment: self.enteredDescription, group: self.enteredCategory)
+    }
+}
+
+extension AdditionViewModel: BookmarkUseCaseOutputBoundary {
+    func message(_ message: BookmarkUseCaseMessage) {
+        if case .success(.create(_)) = message {
+            self.homeNavigator.navigateToHome()
         }
     }
 }
