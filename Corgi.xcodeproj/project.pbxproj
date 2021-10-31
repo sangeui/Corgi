@@ -525,6 +525,7 @@
 		4F7C1BA7272D0F3B00B55C15 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4FAE636126E3C8E50057A4A7 /* UnfinishedBookmark.swift */,
 				4FAE635B26E3BF530057A4A7 /* Bookmark.swift */,
 			);
 			path = Model;
@@ -907,7 +908,6 @@
 		4FAE636026E3C8E00057A4A7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4FAE636126E3C8E50057A4A7 /* UnfinishedBookmark.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
