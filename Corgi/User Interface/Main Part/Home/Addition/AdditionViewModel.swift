@@ -19,17 +19,14 @@ class AdditionViewModel {
     private let bookmarkUseCaseInteractor: BookmarkUseCaseInteractor = .init(dataAccessInterface: CoreDataInterface()!)
     private let groupUseCaseInteractor: GroupUseCaseInteractor = .init(dataAccessInterface: CoreDataInterface()!)
     
-    private let bookmarkManager: StorageManager
     private let homeNavigator: HomeNavigator
     
     private var enteredURLtext: String = .empty
     private var enteredCategory: String = .empty
     private var enteredDescription: String = .empty
     
-    init(bookmarkManager: StorageManager,
-         homeNavigator: HomeNavigator,
+    init(homeNavigator: HomeNavigator,
          unstoredBookmark: UnfinishedBookmark?) {
-        self.bookmarkManager = bookmarkManager
         self.homeNavigator = homeNavigator
         self.unfinishedBookmark = unstoredBookmark
         

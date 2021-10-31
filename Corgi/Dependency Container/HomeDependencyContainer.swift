@@ -46,8 +46,7 @@ private extension HomeDependencyContainer {
     
     func createAdditionViewModel(homeNavigator: HomeNavigator,
                                  unstoredBookmark: UnfinishedBookmark?) -> AdditionViewModel {
-        return .init(bookmarkManager: self.bookmarkManager,
-                     homeNavigator: homeNavigator,
+        return .init(homeNavigator: homeNavigator,
                      unstoredBookmark: unstoredBookmark)
     }
 }
