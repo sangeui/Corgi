@@ -24,6 +24,6 @@ class BookmarkDependencyContainer {
 
 private extension BookmarkDependencyContainer {
     func createBookmarkViewModel(bookmark: Bookmark) -> BookmarkViewModel {
-        return .init(bookmarkManager: self.bookmarkManager, bookmark: bookmark)
+        return .init(bookmark: bookmark)
     }
 }

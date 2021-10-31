@@ -47,7 +47,7 @@ private extension SubDependencyContainer {
     }
     
     func createBookmarkViewController(bookmark: Bookmark) -> BookmarkViewController {
-        let viewModel: BookmarkViewModel = .init(bookmarkManager: self.storageManager, bookmark: bookmark)
+        let viewModel: BookmarkViewModel = .init(bookmark: bookmark)
         return .init(viewModel: viewModel)
     }
 }
