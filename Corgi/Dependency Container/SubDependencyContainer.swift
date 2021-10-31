@@ -72,7 +72,7 @@ class BookmarksDependencyContainer {
 
 private extension BookmarksDependencyContainer {
     func createGroupSelectViewController() -> GroupSelectViewController {
-        let viewModel = GroupSelectViewModel(storageManager: self.storageManager)
+        let viewModel = GroupSelectViewModel()
         return .init(viewModel: viewModel)
     }
 }
