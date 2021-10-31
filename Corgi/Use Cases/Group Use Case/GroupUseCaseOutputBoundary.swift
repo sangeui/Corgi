@@ -16,7 +16,8 @@ enum GroupUseCase {
     case create(String? = nil),
          read(String? = nil),
          update(String? = nil),
-         delete(String? = nil)
+         delete(String? = nil),
+         clear(String? = nil)
 }
 
 protocol GroupUseCaseOutputBoundary: AnyObject {

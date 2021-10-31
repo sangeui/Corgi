@@ -39,6 +39,14 @@ extension GroupUseCaseInteractor: GroupUseCaseInputBoundary {
             self.outputBoundary?.message(.failure(.delete()))
         }
     }
+    
+    func clear() {
+        if self.dataAccessInterface.clear() {
+            self.outputBoundary?.message(.success(.clear()))
+        } else {
+            self.outputBoundary?.message(.failure(.clear()))
+        }
+    }
 }
 
 private extension GroupRM {

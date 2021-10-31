@@ -12,6 +12,7 @@ protocol GroupAccessInterface {
     func read(predicate: NSPredicate?, sort: NSSortDescriptor?) -> [GroupRM]
     func update(group: GroupRM) -> Bool
     func delete(group: UUID) -> Bool
+    func clear() -> Bool
 }
 
 extension CoreDataInterface: GroupAccessInterface {
@@ -25,6 +26,10 @@ extension CoreDataInterface: GroupAccessInterface {
     
     func delete(group: UUID) -> Bool {
         return self.deleteGroup(group)
+    }
+    
+    func clear() -> Bool {
+        return self.reset()
     }
 }
 
