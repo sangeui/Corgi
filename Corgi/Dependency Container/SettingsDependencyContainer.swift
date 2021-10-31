@@ -22,8 +22,7 @@ class SettingsDependencyContainer {
     
     func createSettingsViewController() -> SettingsViewController {
         let viewModel: SettingsViewModel = .init(appearanceManager: self.appearanceManager,
-                                                 userInterfaceResponder: self.userInterfaceResponder,
-                                                 storageManager: self.storageManager)
+                                                 userInterfaceResponder: self.userInterfaceResponder)
         
         return .init(viewModel: viewModel)
     }

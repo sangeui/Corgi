@@ -7,20 +7,20 @@
 
 import Foundation
 import Combine
+import CorgiStorage
 
 class SettingsViewModel {
     @Published public private(set) var dialog: SettingsDialog? = nil
     
     private let appearanceManager: AppearanceManager
     private let userInterfaceResponder: UserInterfaceStyleResponder
-    private let storageManager: StorageManager
+    
+    private let groupUseCaseInteractor: GroupUseCaseInteractor = .init(dataAccessInterface: CoreDataInterface()!)
     
     init(appearanceManager: AppearanceManager,
-         userInterfaceResponder: UserInterfaceStyleResponder,
-         storageManager: StorageManager) {
+         userInterfaceResponder: UserInterfaceStyleResponder) {
         self.appearanceManager = appearanceManager
         self.userInterfaceResponder = userInterfaceResponder
-        self.storageManager = storageManager
     }
     
     func setAppearance(style: Int) {
@@ -41,7 +41,7 @@ class SettingsViewModel {
     }
     
     func clearAllStoredData() {
-        self.storageManager.reset()
+        self.groupUseCaseInteractor.clear()
     }
 }
 
