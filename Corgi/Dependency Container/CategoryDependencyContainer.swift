@@ -30,8 +30,7 @@ class CategoryDependencyContainer {
 
 private extension CategoryDependencyContainer {
     func createCategoryViewModel() -> GroupsViewModel {
-        return .init(bookmarkNavigator: self.mainViewModel,
-                     categoryManager: self.categoryManager)
+        return .init(bookmarkNavigator: self.mainViewModel)
     }
     
     func createBookmarksMainNavigationController(category: Group) -> SubNavigationController {
