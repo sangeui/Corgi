@@ -9,19 +9,13 @@ import UIKit
 
 class SubDependencyContainer {
     private let bookmarksMainViewModel: BookmarksMainViewModel
-    private let storageManager: StorageManager
     
-    init(storageManager: StorageManager) {
+    init() {
         self.bookmarksMainViewModel = .init()
-        self.storageManager = storageManager
     }
     
     func getBookmarksMainViewModel() -> BookmarksMainViewModel {
         return self.bookmarksMainViewModel
-    }
-    
-    func getStorageManager() -> StorageManager {
-        return self.storageManager
     }
     
     func createBookmarksMainNavigationController(group: Group) -> SubNavigationController {
@@ -54,11 +48,9 @@ private extension SubDependencyContainer {
 
 class BookmarksDependencyContainer {
     private let bookmarksMainViewModel: BookmarksMainViewModel
-    private let storageManager: StorageManager
     
     init(_ bookmarksMainDependencyContainer: SubDependencyContainer) {
         self.bookmarksMainViewModel = bookmarksMainDependencyContainer.getBookmarksMainViewModel()
-        self.storageManager = bookmarksMainDependencyContainer.getStorageManager()
     }
     
     func createBookmarksViewController(group: Group) -> BookmarksViewController {

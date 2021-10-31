@@ -17,3 +17,9 @@ public struct Bookmark: Equatable {
     var created: Date
     var isOpened: Bool
 }
+
+extension Bookmark: Comparable {
+    public static func < (lhs: Bookmark, rhs: Bookmark) -> Bool {
+        return lhs.created > rhs.created
+    }
+}

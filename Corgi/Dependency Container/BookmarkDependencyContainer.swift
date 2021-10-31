@@ -9,11 +9,9 @@ import Foundation
 
 class BookmarkDependencyContainer {
     private let mainViewModel: MainViewModel
-    private let bookmarkManager: StorageManager
     
     init(_ superDependencyContainer: MainDependencyContainer) {
         self.mainViewModel = superDependencyContainer.getMainViewModel()
-        self.bookmarkManager = superDependencyContainer.getBookmarkManager()
     }
     
     func createBookmarkViewController(bookmark: Bookmark) -> BookmarkViewController {

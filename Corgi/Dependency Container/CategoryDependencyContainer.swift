@@ -10,11 +10,9 @@ import Foundation
 class CategoryDependencyContainer {
     private let superDependencyContainer: MainDependencyContainer
     private let mainViewModel: MainViewModel
-    private let categoryManager: StorageManager
     
     init(_ superDependencyContainer: MainDependencyContainer) {
         self.mainViewModel = superDependencyContainer.getMainViewModel()
-        self.categoryManager = superDependencyContainer.getBookmarkManager()
         self.superDependencyContainer = superDependencyContainer
     }
     
@@ -34,7 +32,7 @@ private extension CategoryDependencyContainer {
     }
     
     func createBookmarksMainNavigationController(category: Group) -> SubNavigationController {
-        let dependencyContainer: SubDependencyContainer = .init(storageManager: self.categoryManager)
+        let dependencyContainer: SubDependencyContainer = .init()
         return dependencyContainer.createBookmarksMainNavigationController(group: category)
     }
 }

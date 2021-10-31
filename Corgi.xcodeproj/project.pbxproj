@@ -99,11 +99,7 @@
 		4FAE634F26DFF5250057A4A7 /* AdditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE634E26DFF5250057A4A7 /* AdditionViewController.swift */; };
 		4FAE635126DFF53B0057A4A7 /* AdditionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE635026DFF53B0057A4A7 /* AdditionViewModel.swift */; };
 		4FAE635626E288980057A4A7 /* BookmarkVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE635526E288980057A4A7 /* BookmarkVIewModel.swift */; };
-		4FAE635F26E3C15E0057A4A7 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE635E26E3C15E0057A4A7 /* StorageManager.swift */; };
 		4FAE636226E3C8E50057A4A7 /* UnfinishedBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE636126E3C8E50057A4A7 /* UnfinishedBookmark.swift */; };
-		4FAE636526E3C94D0057A4A7 /* SavingBookmarkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE636426E3C94D0057A4A7 /* SavingBookmarkError.swift */; };
-		4FAE636826E3C9930057A4A7 /* ConvertingBookmarkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE636726E3C9930057A4A7 /* ConvertingBookmarkProtocol.swift */; };
-		4FAE636C26E3CAA20057A4A7 /* BookmarkConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE636B26E3CAA20057A4A7 /* BookmarkConverter.swift */; };
 		4FAE637126E48E630057A4A7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE637026E48E630057A4A7 /* HomeView.swift */; };
 		4FAE637326E48E8E0057A4A7 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE637226E48E8E0057A4A7 /* View.swift */; };
 		4FAE637626E511920057A4A7 /* HomaNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE637526E511920057A4A7 /* HomaNavigator.swift */; };
@@ -279,11 +275,7 @@
 		4FAE635026DFF53B0057A4A7 /* AdditionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionViewModel.swift; sourceTree = "<group>"; };
 		4FAE635526E288980057A4A7 /* BookmarkVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkVIewModel.swift; sourceTree = "<group>"; };
 		4FAE635B26E3BF530057A4A7 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
-		4FAE635E26E3C15E0057A4A7 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		4FAE636126E3C8E50057A4A7 /* UnfinishedBookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfinishedBookmark.swift; sourceTree = "<group>"; };
-		4FAE636426E3C94D0057A4A7 /* SavingBookmarkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingBookmarkError.swift; sourceTree = "<group>"; };
-		4FAE636726E3C9930057A4A7 /* ConvertingBookmarkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertingBookmarkProtocol.swift; sourceTree = "<group>"; };
-		4FAE636B26E3CAA20057A4A7 /* BookmarkConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkConverter.swift; sourceTree = "<group>"; };
 		4FAE637026E48E630057A4A7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4FAE637226E48E8E0057A4A7 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		4FAE637526E511920057A4A7 /* HomaNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomaNavigator.swift; sourceTree = "<group>"; };
@@ -363,7 +355,6 @@
 		4F3F5D33272672D600164F3F /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				4F3F5D35272672F300164F3F /* Bookmarks */,
 				4F3F5D34272672E200164F3F /* Appearance */,
 			);
 			path = Manager;
@@ -375,17 +366,6 @@
 				4FF0103126F716E2009CABCC /* AppearanceManager.swift */,
 			);
 			path = Appearance;
-			sourceTree = "<group>";
-		};
-		4F3F5D35272672F300164F3F /* Bookmarks */ = {
-			isa = PBXGroup;
-			children = (
-				4FAE636A26E3CA920057A4A7 /* BookmarkConverter */,
-				4FAE636326E3C8F30057A4A7 /* Error */,
-				4FAE636026E3C8E00057A4A7 /* Model */,
-				4FAE635E26E3C15E0057A4A7 /* StorageManager.swift */,
-			);
-			path = Bookmarks;
 			sourceTree = "<group>";
 		};
 		4F3F5D362726760A00164F3F /* Extension */ = {
@@ -905,38 +885,6 @@
 			path = Addition;
 			sourceTree = "<group>";
 		};
-		4FAE636026E3C8E00057A4A7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4FAE636326E3C8F30057A4A7 /* Error */ = {
-			isa = PBXGroup;
-			children = (
-				4FAE636426E3C94D0057A4A7 /* SavingBookmarkError.swift */,
-			);
-			path = Error;
-			sourceTree = "<group>";
-		};
-		4FAE636626E3C9800057A4A7 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				4FAE636726E3C9930057A4A7 /* ConvertingBookmarkProtocol.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
-		4FAE636A26E3CA920057A4A7 /* BookmarkConverter */ = {
-			isa = PBXGroup;
-			children = (
-				4FAE636626E3C9800057A4A7 /* Protocol */,
-				4FAE636B26E3CAA20057A4A7 /* BookmarkConverter.swift */,
-			);
-			path = BookmarkConverter;
-			sourceTree = "<group>";
-		};
 		4FAE636F26E48E580057A4A7 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1264,7 +1212,6 @@
 				4F83D473270E0F4C0056D56D /* CorgiPasteboard.swift in Sources */,
 				4FF0101D26EFC315009CABCC /* BorderDecorator.swift in Sources */,
 				4FAE639026E5421B0057A4A7 /* Extension+UIButton.swift in Sources */,
-				4FAE636826E3C9930057A4A7 /* ConvertingBookmarkProtocol.swift in Sources */,
 				4F1711C2271F1721000AC173 /* DisabledMessageLabel.swift in Sources */,
 				4FAE633C26DFE3F60057A4A7 /* CategoryDependencyContainer.swift in Sources */,
 				4FAE637626E511920057A4A7 /* HomaNavigator.swift in Sources */,
@@ -1306,8 +1253,6 @@
 				4F2C746B27023C380095B661 /* AdditionCategoryCollectionView.swift in Sources */,
 				4FAE632426DE8EC30057A4A7 /* MainDependencyContainer.swift in Sources */,
 				4FF0101626EE682D009CABCC /* NeumorphicButton.swift in Sources */,
-				4FAE635F26E3C15E0057A4A7 /* StorageManager.swift in Sources */,
-				4FAE636C26E3CAA20057A4A7 /* BookmarkConverter.swift in Sources */,
 				4F7C1B9A272C674300B55C15 /* GroupUseCaseInputBoundary.swift in Sources */,
 				4F8AB87D2708ADF8001B82DF /* GroupsView.swift in Sources */,
 				4FAE635126DFF53B0057A4A7 /* AdditionViewModel.swift in Sources */,
@@ -1324,7 +1269,6 @@
 				4FAE632B26DE8F0F0057A4A7 /* GroupsViewController.swift in Sources */,
 				4FAE633526DE91BE0057A4A7 /* MainVIewModel.swift in Sources */,
 				4F4C172E2720919700A99CB4 /* HomeGuide.swift in Sources */,
-				4FAE636526E3C94D0057A4A7 /* SavingBookmarkError.swift in Sources */,
 				4FF0102F26F643A3009CABCC /* UIImagerLoader.swift in Sources */,
 				4F8CE01B2723E337000E6E4B /* SettingTableViewCell.swift in Sources */,
 				4FAE633026DE8FD70057A4A7 /* ViewController.swift in Sources */,
