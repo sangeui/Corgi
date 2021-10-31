@@ -352,22 +352,6 @@
 			path = "Custom Presentation";
 			sourceTree = "<group>";
 		};
-		4F3F5D33272672D600164F3F /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				4F3F5D34272672E200164F3F /* Appearance */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		4F3F5D34272672E200164F3F /* Appearance */ = {
-			isa = PBXGroup;
-			children = (
-				4FF0103126F716E2009CABCC /* AppearanceManager.swift */,
-			);
-			path = Appearance;
-			sourceTree = "<group>";
-		};
 		4F3F5D362726760A00164F3F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,6 +463,7 @@
 		4F7C1B90272C664200B55C15 /* Appearance Use Case */ = {
 			isa = PBXGroup;
 			children = (
+				4FF0103126F716E2009CABCC /* AppearanceManager.swift */,
 				4F7C1B9D272C677100B55C15 /* AppearanceUseCaseInteractor.swift */,
 				4F7C1B9F272C678500B55C15 /* AppearanceUseCaseInputBoundary.swift */,
 				4F7C1BA1272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift */,
@@ -779,7 +764,6 @@
 				4F8AB8492704DC14001B82DF /* Corgi.entitlements */,
 				4F1711BD271EF873000AC173 /* Design */,
 				4F8CE02227246CE5000E6E4B /* Localization */,
-				4F3F5D33272672D600164F3F /* Manager */,
 				4F3F5D362726760A00164F3F /* Extension */,
 				4F3F5D372726774900164F3F /* Dependency Container */,
 				4FAE634526DFEE420057A4A7 /* User Interface */,
