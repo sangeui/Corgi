@@ -38,6 +38,8 @@
 		4F7C1BA2272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BA1272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift */; };
 		4F7C1BA6272C722400B55C15 /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BA5272C722400B55C15 /* ValidationRule.swift */; };
 		4F7C1BAA272D0F5300B55C15 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BA9272D0F5300B55C15 /* Group.swift */; };
+		4F7C1BAD272DBED800B55C15 /* BookmarkAccessInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BAC272DBED800B55C15 /* BookmarkAccessInterface.swift */; };
+		4F7C1BAF272EEE6400B55C15 /* GroupAccessInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BAE272EEE6400B55C15 /* GroupAccessInterface.swift */; };
 		4F83D466270C6F500056D56D /* CorgiGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D465270C6F500056D56D /* CorgiGuideView.swift */; };
 		4F83D469270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D468270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift */; };
 		4F83D46B270CB93E0056D56D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D46A270CB93E0056D56D /* CollectionViewCell.swift */; };
@@ -97,11 +99,7 @@
 		4FAE634F26DFF5250057A4A7 /* AdditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE634E26DFF5250057A4A7 /* AdditionViewController.swift */; };
 		4FAE635126DFF53B0057A4A7 /* AdditionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE635026DFF53B0057A4A7 /* AdditionViewModel.swift */; };
 		4FAE635626E288980057A4A7 /* BookmarkVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE635526E288980057A4A7 /* BookmarkVIewModel.swift */; };
-		4FAE635F26E3C15E0057A4A7 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE635E26E3C15E0057A4A7 /* StorageManager.swift */; };
 		4FAE636226E3C8E50057A4A7 /* UnfinishedBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE636126E3C8E50057A4A7 /* UnfinishedBookmark.swift */; };
-		4FAE636526E3C94D0057A4A7 /* SavingBookmarkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE636426E3C94D0057A4A7 /* SavingBookmarkError.swift */; };
-		4FAE636826E3C9930057A4A7 /* ConvertingBookmarkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE636726E3C9930057A4A7 /* ConvertingBookmarkProtocol.swift */; };
-		4FAE636C26E3CAA20057A4A7 /* BookmarkConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE636B26E3CAA20057A4A7 /* BookmarkConverter.swift */; };
 		4FAE637126E48E630057A4A7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE637026E48E630057A4A7 /* HomeView.swift */; };
 		4FAE637326E48E8E0057A4A7 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE637226E48E8E0057A4A7 /* View.swift */; };
 		4FAE637626E511920057A4A7 /* HomaNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE637526E511920057A4A7 /* HomaNavigator.swift */; };
@@ -210,6 +208,8 @@
 		4F7C1BA1272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceUseCaseOutputBoundary.swift; sourceTree = "<group>"; };
 		4F7C1BA5272C722400B55C15 /* ValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
 		4F7C1BA9272D0F5300B55C15 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		4F7C1BAC272DBED800B55C15 /* BookmarkAccessInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkAccessInterface.swift; sourceTree = "<group>"; };
+		4F7C1BAE272EEE6400B55C15 /* GroupAccessInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAccessInterface.swift; sourceTree = "<group>"; };
 		4F83D465270C6F500056D56D /* CorgiGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorgiGuideView.swift; sourceTree = "<group>"; };
 		4F83D468270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorgiGuideVerticalTextStackView.swift; sourceTree = "<group>"; };
 		4F83D46A270CB93E0056D56D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -275,11 +275,7 @@
 		4FAE635026DFF53B0057A4A7 /* AdditionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionViewModel.swift; sourceTree = "<group>"; };
 		4FAE635526E288980057A4A7 /* BookmarkVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkVIewModel.swift; sourceTree = "<group>"; };
 		4FAE635B26E3BF530057A4A7 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
-		4FAE635E26E3C15E0057A4A7 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		4FAE636126E3C8E50057A4A7 /* UnfinishedBookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfinishedBookmark.swift; sourceTree = "<group>"; };
-		4FAE636426E3C94D0057A4A7 /* SavingBookmarkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingBookmarkError.swift; sourceTree = "<group>"; };
-		4FAE636726E3C9930057A4A7 /* ConvertingBookmarkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertingBookmarkProtocol.swift; sourceTree = "<group>"; };
-		4FAE636B26E3CAA20057A4A7 /* BookmarkConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkConverter.swift; sourceTree = "<group>"; };
 		4FAE637026E48E630057A4A7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4FAE637226E48E8E0057A4A7 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		4FAE637526E511920057A4A7 /* HomaNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomaNavigator.swift; sourceTree = "<group>"; };
@@ -356,34 +352,6 @@
 			path = "Custom Presentation";
 			sourceTree = "<group>";
 		};
-		4F3F5D33272672D600164F3F /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				4F3F5D35272672F300164F3F /* Bookmarks */,
-				4F3F5D34272672E200164F3F /* Appearance */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		4F3F5D34272672E200164F3F /* Appearance */ = {
-			isa = PBXGroup;
-			children = (
-				4FF0103126F716E2009CABCC /* AppearanceManager.swift */,
-			);
-			path = Appearance;
-			sourceTree = "<group>";
-		};
-		4F3F5D35272672F300164F3F /* Bookmarks */ = {
-			isa = PBXGroup;
-			children = (
-				4FAE636A26E3CA920057A4A7 /* BookmarkConverter */,
-				4FAE636326E3C8F30057A4A7 /* Error */,
-				4FAE636026E3C8E00057A4A7 /* Model */,
-				4FAE635E26E3C15E0057A4A7 /* StorageManager.swift */,
-			);
-			path = Bookmarks;
-			sourceTree = "<group>";
-		};
 		4F3F5D362726760A00164F3F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +422,7 @@
 		4F7C1B8C272C65E800B55C15 /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				4F7C1BAB272DBE6700B55C15 /* Data Access Interface */,
 				4F7C1BA4272C720A00B55C15 /* Other Use Cases */,
 				4F7C1B90272C664200B55C15 /* Appearance Use Case */,
 				4F7C1B8E272C662B00B55C15 /* Bookmark Use Case */,
@@ -494,6 +463,7 @@
 		4F7C1B90272C664200B55C15 /* Appearance Use Case */ = {
 			isa = PBXGroup;
 			children = (
+				4FF0103126F716E2009CABCC /* AppearanceManager.swift */,
 				4F7C1B9D272C677100B55C15 /* AppearanceUseCaseInteractor.swift */,
 				4F7C1B9F272C678500B55C15 /* AppearanceUseCaseInputBoundary.swift */,
 				4F7C1BA1272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift */,
@@ -520,6 +490,7 @@
 		4F7C1BA7272D0F3B00B55C15 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4FAE636126E3C8E50057A4A7 /* UnfinishedBookmark.swift */,
 				4FAE635B26E3BF530057A4A7 /* Bookmark.swift */,
 			);
 			path = Model;
@@ -531,6 +502,24 @@
 				4F7C1BA9272D0F5300B55C15 /* Group.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4F7C1BAB272DBE6700B55C15 /* Data Access Interface */ = {
+			isa = PBXGroup;
+			children = (
+				4F7C1BAC272DBED800B55C15 /* BookmarkAccessInterface.swift */,
+				4F7C1BAE272EEE6400B55C15 /* GroupAccessInterface.swift */,
+			);
+			path = "Data Access Interface";
+			sourceTree = "<group>";
+		};
+		4F7C1BB0272EFDCB00B55C15 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				4FAE630E26DE8DC20057A4A7 /* AppDelegate.swift */,
+				4FAE631026DE8DC20057A4A7 /* SceneDelegate.swift */,
+			);
+			path = "App Delegate";
 			sourceTree = "<group>";
 		};
 		4F83D464270C6E590056D56D /* View */ = {
@@ -779,17 +768,15 @@
 		4FAE630D26DE8DC20057A4A7 /* Corgi */ = {
 			isa = PBXGroup;
 			children = (
+				4F8AB8492704DC14001B82DF /* Corgi.entitlements */,
+				4F7C1BB0272EFDCB00B55C15 /* App Delegate */,
 				4F7C1B8C272C65E800B55C15 /* Use Cases */,
 				4F7C1B8D272C65F300B55C15 /* Interface Adapters */,
-				4F8AB8492704DC14001B82DF /* Corgi.entitlements */,
 				4F1711BD271EF873000AC173 /* Design */,
 				4F8CE02227246CE5000E6E4B /* Localization */,
-				4F3F5D33272672D600164F3F /* Manager */,
 				4F3F5D362726760A00164F3F /* Extension */,
 				4F3F5D372726774900164F3F /* Dependency Container */,
 				4FAE634526DFEE420057A4A7 /* User Interface */,
-				4FAE630E26DE8DC20057A4A7 /* AppDelegate.swift */,
-				4FAE631026DE8DC20057A4A7 /* SceneDelegate.swift */,
 				4FAE631726DE8DC50057A4A7 /* Assets.xcassets */,
 				4FAE631926DE8DC50057A4A7 /* LaunchScreen.storyboard */,
 				4FAE631C26DE8DC50057A4A7 /* Info.plist */,
@@ -888,39 +875,6 @@
 				4FAE635026DFF53B0057A4A7 /* AdditionViewModel.swift */,
 			);
 			path = Addition;
-			sourceTree = "<group>";
-		};
-		4FAE636026E3C8E00057A4A7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				4FAE636126E3C8E50057A4A7 /* UnfinishedBookmark.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4FAE636326E3C8F30057A4A7 /* Error */ = {
-			isa = PBXGroup;
-			children = (
-				4FAE636426E3C94D0057A4A7 /* SavingBookmarkError.swift */,
-			);
-			path = Error;
-			sourceTree = "<group>";
-		};
-		4FAE636626E3C9800057A4A7 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				4FAE636726E3C9930057A4A7 /* ConvertingBookmarkProtocol.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
-		4FAE636A26E3CA920057A4A7 /* BookmarkConverter */ = {
-			isa = PBXGroup;
-			children = (
-				4FAE636626E3C9800057A4A7 /* Protocol */,
-				4FAE636B26E3CAA20057A4A7 /* BookmarkConverter.swift */,
-			);
-			path = BookmarkConverter;
 			sourceTree = "<group>";
 		};
 		4FAE636F26E48E580057A4A7 /* View */ = {
@@ -1211,6 +1165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F7C1BAD272DBED800B55C15 /* BookmarkAccessInterface.swift in Sources */,
 				4F8CE02627247350000E6E4B /* LocalizedString.swift in Sources */,
 				4F8AB898270AE224001B82DF /* BookmarksViewController.swift in Sources */,
 				4F7769242719B4A1009D2C5F /* DimmingClosePresentationController.swift in Sources */,
@@ -1249,7 +1204,6 @@
 				4F83D473270E0F4C0056D56D /* CorgiPasteboard.swift in Sources */,
 				4FF0101D26EFC315009CABCC /* BorderDecorator.swift in Sources */,
 				4FAE639026E5421B0057A4A7 /* Extension+UIButton.swift in Sources */,
-				4FAE636826E3C9930057A4A7 /* ConvertingBookmarkProtocol.swift in Sources */,
 				4F1711C2271F1721000AC173 /* DisabledMessageLabel.swift in Sources */,
 				4FAE633C26DFE3F60057A4A7 /* CategoryDependencyContainer.swift in Sources */,
 				4FAE637626E511920057A4A7 /* HomaNavigator.swift in Sources */,
@@ -1267,6 +1221,7 @@
 				4FAE638326E52AA40057A4A7 /* ViewDecorator.swift in Sources */,
 				4F77692227189133009D2C5F /* SubNavigationController.swift in Sources */,
 				4F83D486271016900056D56D /* BookmarkListPresentor.swift in Sources */,
+				4F7C1BAF272EEE6400B55C15 /* GroupAccessInterface.swift in Sources */,
 				4F8CE01F27240435000E6E4B /* BookmarkToolbar.swift in Sources */,
 				4FAE631326DE8DC20057A4A7 /* MainNavigationController.swift in Sources */,
 				4F1711C4271F1928000AC173 /* HomeTableView.swift in Sources */,
@@ -1290,8 +1245,6 @@
 				4F2C746B27023C380095B661 /* AdditionCategoryCollectionView.swift in Sources */,
 				4FAE632426DE8EC30057A4A7 /* MainDependencyContainer.swift in Sources */,
 				4FF0101626EE682D009CABCC /* NeumorphicButton.swift in Sources */,
-				4FAE635F26E3C15E0057A4A7 /* StorageManager.swift in Sources */,
-				4FAE636C26E3CAA20057A4A7 /* BookmarkConverter.swift in Sources */,
 				4F7C1B9A272C674300B55C15 /* GroupUseCaseInputBoundary.swift in Sources */,
 				4F8AB87D2708ADF8001B82DF /* GroupsView.swift in Sources */,
 				4FAE635126DFF53B0057A4A7 /* AdditionViewModel.swift in Sources */,
@@ -1308,7 +1261,6 @@
 				4FAE632B26DE8F0F0057A4A7 /* GroupsViewController.swift in Sources */,
 				4FAE633526DE91BE0057A4A7 /* MainVIewModel.swift in Sources */,
 				4F4C172E2720919700A99CB4 /* HomeGuide.swift in Sources */,
-				4FAE636526E3C94D0057A4A7 /* SavingBookmarkError.swift in Sources */,
 				4FF0102F26F643A3009CABCC /* UIImagerLoader.swift in Sources */,
 				4F8CE01B2723E337000E6E4B /* SettingTableViewCell.swift in Sources */,
 				4FAE633026DE8FD70057A4A7 /* ViewController.swift in Sources */,

@@ -23,3 +23,8 @@ protocol BookmarkUseCaseOutputBoundary: AnyObject {
     func send(bookmarks: [Bookmark])
     func message(_ message: BookmarkUseCaseMessage)
 }
+
+extension BookmarkUseCaseOutputBoundary {
+    func send(bookmarks: [Bookmark]) { }
+    func message(_ message: BookmarkUseCaseMessage) { }
+}

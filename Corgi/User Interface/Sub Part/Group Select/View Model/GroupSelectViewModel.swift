@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import CorgiStorage
 
 class GroupSelectViewModel {
     @Published public private(set) var groups: [Group] = .empty
@@ -16,14 +17,14 @@ class GroupSelectViewModel {
         didSet { self.groups = self.immutableGroups}
     }
     
-    private let storageManager: StorageManager
+    private let groupUseCaseInteractor: GroupUseCaseInteractor = .init(dataAccessInterface: CoreDataInterface()!)
     
-    init(storageManager: StorageManager) {
-        self.storageManager = storageManager
+    init() {
+        self.groupUseCaseInteractor.outputBoundary = self
     }
     
     func requestGroups() {
-        self.immutableGroups = self.storageManager.readAllGroups()
+        self.groupUseCaseInteractor.read()
     }
     
     func select(group index: Int) {
@@ -33,6 +34,12 @@ class GroupSelectViewModel {
     func search(_ text: String) {
         guard text.isEmpty.isNot else { self.resetGroups(); return }
         self.groups = self.immutableGroups.filter({ $0.name.contains(text)})
+    }
+}
+
+extension GroupSelectViewModel: GroupUseCaseOutputBoundary {
+    func send(groups: [Group]) {
+        self.immutableGroups = groups
     }
 }
 

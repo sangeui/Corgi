@@ -59,7 +59,7 @@ extension BookmarksView: UITableViewDataSource {
         let bookmark = self.viewModel.bookmarks[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? BookmarkTableViewCell ?? .init()
         cell.urlString = bookmark.url.absoluteString
-        cell.urlDescription = bookmark.explanation
+        cell.urlDescription = bookmark.comment
         cell.isHiddenCircleView = bookmark.isOpened
         
         let url = bookmark.url
@@ -81,8 +81,7 @@ extension BookmarksView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
         
-        if self.viewModel.removeBookmark(given: indexPath.row) {
-        }
+        self.viewModel.removeBookmark(given: indexPath.row)
     }
 }
 

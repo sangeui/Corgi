@@ -13,11 +13,9 @@ class BookmarkViewModel {
         didSet { print("🛫 \(self.view)") }
     }
     
-    private let bookmarkManager: StorageManager
     private let bookamrk: Bookmark
     
-    init(bookmarkManager: StorageManager, bookmark: Bookmark) {
-        self.bookmarkManager = bookmarkManager
+    init(bookmark: Bookmark) {
         self.bookamrk = bookmark
     }
     
@@ -46,7 +44,7 @@ class BookmarkViewModel {
     }
     
     func bookmarkDescription() -> String? {
-        return self.bookamrk.explanation
+        return self.bookamrk.comment
     }
 }
 

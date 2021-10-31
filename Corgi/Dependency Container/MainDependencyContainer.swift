@@ -10,26 +10,13 @@ import CorgiStorage
 
 class MainDependencyContainer {
     private let mainViewModel: MainViewModel
-    private let bookmarkManager: StorageManager
     private let appearanceManager: AppearanceManager
     private let userInterfaceResponder: UserInterfaceStyleResponder
     
     init?(userInterfaceResponder: UserInterfaceStyleResponder) {
-        func createBookmarkManager() -> StorageManager? {
-            guard let repository: CoreDataInterface = .init() else { return nil }
-            let converter: BookmarkConverter = .init()
-            let manager: StorageManager = .init(bookmarkRepository: repository,
-                                                 bookmarkConverter: converter)
-            
-            return manager
-        }
-        
         self.userInterfaceResponder = userInterfaceResponder
         self.mainViewModel = .init()
         self.appearanceManager = .init()
-        
-        guard let manager = createBookmarkManager() else { return nil }
-        self.bookmarkManager = manager
     }
     
     func getAppearanceManager() -> AppearanceManager {
@@ -38,10 +25,6 @@ class MainDependencyContainer {
     
     func getMainViewModel() -> MainViewModel {
         return self.mainViewModel
-    }
-    
-    func getBookmarkManager() -> StorageManager {
-        return self.bookmarkManager
     }
     
     func getUserInterfaceResponder() -> UserInterfaceStyleResponder {

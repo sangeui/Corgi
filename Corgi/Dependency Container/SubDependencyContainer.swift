@@ -9,19 +9,13 @@ import UIKit
 
 class SubDependencyContainer {
     private let bookmarksMainViewModel: BookmarksMainViewModel
-    private let storageManager: StorageManager
     
-    init(storageManager: StorageManager) {
+    init() {
         self.bookmarksMainViewModel = .init()
-        self.storageManager = storageManager
     }
     
     func getBookmarksMainViewModel() -> BookmarksMainViewModel {
         return self.bookmarksMainViewModel
-    }
-    
-    func getStorageManager() -> StorageManager {
-        return self.storageManager
     }
     
     func createBookmarksMainNavigationController(group: Group) -> SubNavigationController {
@@ -47,22 +41,20 @@ private extension SubDependencyContainer {
     }
     
     func createBookmarkViewController(bookmark: Bookmark) -> BookmarkViewController {
-        let viewModel: BookmarkViewModel = .init(bookmarkManager: self.storageManager, bookmark: bookmark)
+        let viewModel: BookmarkViewModel = .init(bookmark: bookmark)
         return .init(viewModel: viewModel)
     }
 }
 
 class BookmarksDependencyContainer {
     private let bookmarksMainViewModel: BookmarksMainViewModel
-    private let storageManager: StorageManager
     
     init(_ bookmarksMainDependencyContainer: SubDependencyContainer) {
         self.bookmarksMainViewModel = bookmarksMainDependencyContainer.getBookmarksMainViewModel()
-        self.storageManager = bookmarksMainDependencyContainer.getStorageManager()
     }
     
     func createBookmarksViewController(group: Group) -> BookmarksViewController {
-        let viewModel: BookmarksViewModel = .init(storageManager: self.storageManager, bookmarkNavigator: self.bookmarksMainViewModel, category: group)
+        let viewModel: BookmarksViewModel = .init(bookmarkNavigator: self.bookmarksMainViewModel, category: group)
         let groupSelect = {
             return self.createGroupSelectViewController()
         }
@@ -72,7 +64,7 @@ class BookmarksDependencyContainer {
 
 private extension BookmarksDependencyContainer {
     func createGroupSelectViewController() -> GroupSelectViewController {
-        let viewModel = GroupSelectViewModel(storageManager: self.storageManager)
+        let viewModel = GroupSelectViewModel()
         return .init(viewModel: viewModel)
     }
 }

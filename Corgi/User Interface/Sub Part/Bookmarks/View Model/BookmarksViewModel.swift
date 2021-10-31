@@ -7,24 +7,26 @@
 
 import Foundation
 import Combine
+import CorgiStorage
 
 class BookmarksViewModel {
     @Published public private(set) var bookmarks: Bookmarks = []
     @Published public private(set) var group: Group
     
-    private let storageManager: StorageManager
     private let bookmarkNavigator: BookmarkNavigator
     
-    init(storageManager: StorageManager,
-         bookmarkNavigator: BookmarkNavigator,
+    private let bookmarkUseCaseInteractor: BookmarkUseCaseInteractor = .init(dataAccessInterface: CoreDataInterface()!)
+    
+    init(bookmarkNavigator: BookmarkNavigator,
          category: Group) {
-        self.storageManager = storageManager
         self.bookmarkNavigator = bookmarkNavigator
         self.group = category
+        
+        self.bookmarkUseCaseInteractor.outputBoundary = self
     }
     
     func requestBookmarkList() {
-        self.bookmarks = self.storageManager.readAllBookmarks(of: self.group.identifier)
+        self.bookmarkUseCaseInteractor.read()
     }
     
     func change(to group: Group) {
@@ -34,7 +36,7 @@ class BookmarksViewModel {
     func navigate(to bookmark: Int) {
         var bookmark = self.bookmarks[bookmark]
         bookmark.isOpened = .yes
-        self.storageManager.update(bookmark: bookmark)
+        self.bookmarkUseCaseInteractor.update(bookmark: bookmark)
         self.bookmarkNavigator.navigateToBookmark(bookmark: bookmark)
     }
     
@@ -46,15 +48,27 @@ class BookmarksViewModel {
         return URL(string: faviconURLstring)
     }
     
-    @objc func removeBookmark(given row: Int) -> Bool {
+    @objc func removeBookmark(given row: Int) {
         let bookmark = self.bookmarks[row]
         let identifier = bookmark.identifier
         
-        if self.storageManager.deleteBookmark(given: identifier) {
-            self.bookmarks.remove(at: row)
-            return .yes
-        } else {
-            return .no
+        self.bookmarkUseCaseInteractor.delete(identifier)
+    }
+}
+
+extension BookmarksViewModel: BookmarkUseCaseOutputBoundary {
+    func send(bookmarks: [Bookmark]) {
+        self.bookmarks = bookmarks
+    }
+    
+    func message(_ message: BookmarkUseCaseMessage) {
+        switch message {
+        case .success(let bookmarkUseCase):
+            switch bookmarkUseCase {
+            case .delete(_): self.bookmarkUseCaseInteractor.read()
+            default: break
+            }
+        default: break
         }
     }
 }

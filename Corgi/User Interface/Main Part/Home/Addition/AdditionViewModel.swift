@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import CorgiStorage
 
 class AdditionViewModel {
     typealias CategoryList = [Group]
@@ -15,26 +16,22 @@ class AdditionViewModel {
     @Published public private(set) var categoryList: CategoryList = []
     @Published public private(set) var unfinishedBookmark: UnfinishedBookmark? = nil
     
-    private let bookmarkManager: StorageManager
+    private let bookmarkUseCaseInteractor: BookmarkUseCaseInteractor = .init(dataAccessInterface: CoreDataInterface()!)
+    private let groupUseCaseInteractor: GroupUseCaseInteractor = .init(dataAccessInterface: CoreDataInterface()!)
+    
     private let homeNavigator: HomeNavigator
-    private let unstoredBookmarkHandler: UnstoredBookmarkHandler
     
     private var enteredURLtext: String = .empty
     private var enteredCategory: String = .empty
     private var enteredDescription: String = .empty
     
-    init(bookmarkManager: StorageManager,
-         homeNavigator: HomeNavigator,
-         unstoredBookmarkHandler: UnstoredBookmarkHandler,
+    init(homeNavigator: HomeNavigator,
          unstoredBookmark: UnfinishedBookmark?) {
-        self.bookmarkManager = bookmarkManager
         self.homeNavigator = homeNavigator
         self.unfinishedBookmark = unstoredBookmark
-        self.unstoredBookmarkHandler = unstoredBookmarkHandler
-    }
-    
-    func notifyUnstoredBookmark(bookmark: UnfinishedBookmark) {
-        self.unstoredBookmarkHandler.haveUnstoredBookmark(bookmark)
+        
+        self.bookmarkUseCaseInteractor.outputBoundary = self
+        self.groupUseCaseInteractor.outputBoundary = self
     }
     
     func userDidEnterURLtext(urlText: String) {
@@ -53,20 +50,25 @@ class AdditionViewModel {
     }
     
     func requestCategoryList() {
-        self.categoryList = self.bookmarkManager.readAllGroups()
+        self.groupUseCaseInteractor.read()
     }
     
     @objc func userDidTouchSaveButton() {
-        let newBookmark: UnfinishedBookmark = .init(addressString: self.enteredURLtext, description: self.enteredDescription, category: self.enteredCategory)
-        
-        self.bookmarkManager.createNewBookmark(newBookmark) { result in
-            switch result {
-            case .success(_):
-                self.homeNavigator.navigateToHome()
-            case .failure(let error):
-                print(error)
-            }
+        self.bookmarkUseCaseInteractor.create(url: self.enteredURLtext, comment: self.enteredDescription, group: self.enteredCategory)
+    }
+}
+
+extension AdditionViewModel: BookmarkUseCaseOutputBoundary {
+    func message(_ message: BookmarkUseCaseMessage) {
+        if case .success(.create(_)) = message {
+            self.homeNavigator.navigateToHome()
         }
+    }
+}
+
+extension AdditionViewModel: GroupUseCaseOutputBoundary {
+    func send(groups: [Group]) {
+        self.categoryList = groups
     }
 }
 

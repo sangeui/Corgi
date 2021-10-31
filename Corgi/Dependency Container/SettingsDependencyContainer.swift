@@ -11,19 +11,16 @@ class SettingsDependencyContainer {
     private let mainViewModel: MainViewModel
     private let appearanceManager: AppearanceManager
     private let userInterfaceResponder: UserInterfaceStyleResponder
-    private let storageManager: StorageManager
     
     init(_ superDependencyContainer: MainDependencyContainer) {
         self.mainViewModel = superDependencyContainer.getMainViewModel()
         self.appearanceManager = superDependencyContainer.getAppearanceManager()
         self.userInterfaceResponder = superDependencyContainer.getUserInterfaceResponder()
-        self.storageManager = superDependencyContainer.getBookmarkManager()
     }
     
     func createSettingsViewController() -> SettingsViewController {
         let viewModel: SettingsViewModel = .init(appearanceManager: self.appearanceManager,
-                                                 userInterfaceResponder: self.userInterfaceResponder,
-                                                 storageManager: self.storageManager)
+                                                 userInterfaceResponder: self.userInterfaceResponder)
         
         return .init(viewModel: viewModel)
     }

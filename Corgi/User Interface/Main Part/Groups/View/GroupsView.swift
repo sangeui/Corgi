@@ -100,7 +100,7 @@ extension GroupsView: UICollectionViewDelegateFlowLayout {
                 guard let group = self.viewModel.group(of: indexPath.row) else { return }
                 
                 self.viewModel.dialog(.confirm(action: { [weak self] in
-                    let _ = self?.viewModel.requestDeletingGroup(group.identifier)
+                    self?.viewModel.requestDeletingGroup(group.identifier)
                 }))
             }
             

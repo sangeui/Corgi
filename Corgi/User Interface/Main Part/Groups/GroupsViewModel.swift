@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import UIKit
+import CorgiStorage
 
 enum CategoryViewType: Equatable {
     case category, bookmarkList(Group)
@@ -26,13 +27,12 @@ class GroupsViewModel {
         didSet { self.groups = self.immutableGroups }
     }
     
-    private let categoryManager: StorageManager
+    private let groupUseCaseInteractor: GroupUseCaseInteractor = .init(dataAccessInterface: CoreDataInterface()!)
     private let bookmarkNavigator: BookmarkNavigator
     
-    init(bookmarkNavigator: BookmarkNavigator,
-         categoryManager: StorageManager) {
+    init(bookmarkNavigator: BookmarkNavigator) {
         self.bookmarkNavigator = bookmarkNavigator
-        self.categoryManager = categoryManager
+        self.groupUseCaseInteractor.outputBoundary = self
     }
     
     func groupInformation(of index: Int) -> (name: String, count: Int)? {
@@ -46,20 +46,15 @@ class GroupsViewModel {
     }
     
     func requestCategoryList() {
-        self.immutableGroups = self.categoryManager.readAllGroups()
+        self.groupUseCaseInteractor.read()
     }
     
-    func requestDeletingGroup(_ uuid: UUID) -> Bool {
-        if self.categoryManager.deleteGroup(group: uuid) {
-            self.requestCategoryList()
-            return true
-        } else {
-            return false
-        }
+    func requestDeletingGroup(_ uuid: UUID) {
+        self.groupUseCaseInteractor.delete(uuid: uuid)
     }
     
     func update(group: Group) {
-        self.categoryManager.editGroupName(group: group)
+        self.groupUseCaseInteractor.update(group: group)
     }
     
     func presentBookmarkList(of group: Int) {
@@ -77,6 +72,24 @@ class GroupsViewModel {
     
     func dialog(_ dialog: GroupsDialog?) {
         self.dialog = dialog
+    }
+}
+
+extension GroupsViewModel: GroupUseCaseOutputBoundary {
+    func send(groups: [Group]) {
+        self.immutableGroups = groups
+    }
+    
+    func message(_ message: GroupUseCaseMessage) {
+        switch message {
+        case .success(let groupUseCase):
+            switch groupUseCase {
+            case .update(_): self.groupUseCaseInteractor.read()
+            case .delete(_): self.groupUseCaseInteractor.read()
+            default: break
+            }
+        default: break
+        }
     }
 }
 
