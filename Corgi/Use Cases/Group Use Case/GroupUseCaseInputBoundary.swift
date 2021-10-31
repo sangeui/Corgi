@@ -8,5 +8,7 @@
 import Foundation
 
 protocol GroupUseCaseInputBoundary {
-    
+    func read()
+    func update(group: Group)
+    func delete(uuid: UUID)
 }
