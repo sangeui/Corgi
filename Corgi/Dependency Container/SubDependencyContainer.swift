@@ -62,7 +62,7 @@ class BookmarksDependencyContainer {
     }
     
     func createBookmarksViewController(group: Group) -> BookmarksViewController {
-        let viewModel: BookmarksViewModel = .init(storageManager: self.storageManager, bookmarkNavigator: self.bookmarksMainViewModel, category: group)
+        let viewModel: BookmarksViewModel = .init(bookmarkNavigator: self.bookmarksMainViewModel, category: group)
         let groupSelect = {
             return self.createGroupSelectViewController()
         }

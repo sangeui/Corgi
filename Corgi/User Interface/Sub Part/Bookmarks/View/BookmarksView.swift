@@ -81,8 +81,7 @@ extension BookmarksView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
         
-        if self.viewModel.removeBookmark(given: indexPath.row) {
-        }
+        self.viewModel.removeBookmark(given: indexPath.row)
     }
 }
 
