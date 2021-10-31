@@ -17,6 +17,8 @@ class AdditionViewModel {
     @Published public private(set) var unfinishedBookmark: UnfinishedBookmark? = nil
     
     private let bookmarkUseCaseInteractor: BookmarkUseCaseInteractor = .init(dataAccessInterface: CoreDataInterface()!)
+    private let groupUseCaseInteractor: GroupUseCaseInteractor = .init(dataAccessInterface: CoreDataInterface()!)
+    
     private let bookmarkManager: StorageManager
     private let homeNavigator: HomeNavigator
     
@@ -32,6 +34,7 @@ class AdditionViewModel {
         self.unfinishedBookmark = unstoredBookmark
         
         self.bookmarkUseCaseInteractor.outputBoundary = self
+        self.groupUseCaseInteractor.outputBoundary = self
     }
     
     func userDidEnterURLtext(urlText: String) {
@@ -50,7 +53,7 @@ class AdditionViewModel {
     }
     
     func requestCategoryList() {
-        self.categoryList = self.bookmarkManager.readAllGroups()
+        self.groupUseCaseInteractor.read()
     }
     
     @objc func userDidTouchSaveButton() {
@@ -63,6 +66,12 @@ extension AdditionViewModel: BookmarkUseCaseOutputBoundary {
         if case .success(.create(_)) = message {
             self.homeNavigator.navigateToHome()
         }
+    }
+}
+
+extension AdditionViewModel: GroupUseCaseOutputBoundary {
+    func send(groups: [Group]) {
+        self.categoryList = groups
     }
 }
 
