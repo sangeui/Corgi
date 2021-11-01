@@ -10,17 +10,11 @@ import CorgiStorage
 
 class MainDependencyContainer {
     private let mainViewModel: MainViewModel
-    private let appearanceManager: AppearanceManager
     private let userInterfaceResponder: UserInterfaceStyleResponder
     
     init?(userInterfaceResponder: UserInterfaceStyleResponder) {
         self.userInterfaceResponder = userInterfaceResponder
         self.mainViewModel = .init()
-        self.appearanceManager = .init()
-    }
-    
-    func getAppearanceManager() -> AppearanceManager {
-        return self.appearanceManager
     }
     
     func getMainViewModel() -> MainViewModel {
