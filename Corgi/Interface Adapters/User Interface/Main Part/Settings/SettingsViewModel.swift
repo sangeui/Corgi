@@ -11,28 +11,28 @@ import CorgiStorage
 
 class SettingsViewModel {
     @Published public private(set) var dialog: SettingsDialog? = nil
+    @Published public private(set) var appearance: Int? = nil
     
-    private let appearanceManager: AppearanceManager
     private let userInterfaceResponder: UserInterfaceStyleResponder
     
     private let groupUseCaseInteractor: GroupUseCaseInteractor = .init(dataAccessInterface: CoreDataInterface()!)
+    private let appearanceUseCaseInteractor: AppearanceUseCaseInteractor = .init(dataAccessInterface: AppearanceUserDefaults())
     
-    init(appearanceManager: AppearanceManager,
-         userInterfaceResponder: UserInterfaceStyleResponder) {
-        self.appearanceManager = appearanceManager
+    init(userInterfaceResponder: UserInterfaceStyleResponder) {
         self.userInterfaceResponder = userInterfaceResponder
+        self.appearanceUseCaseInteractor.outputBoundary = self
     }
     
     func setAppearance(style: Int) {
-        self.appearanceManager.setAppearance(to: style)
+        self.appearanceUseCaseInteractor.save(appearance: style)
     }
     
-    func getAppearance() -> Int {
-        return self.appearanceManager.getAppearance() ?? .zero
+    func getAppearance() {
+        self.appearanceUseCaseInteractor.read()
     }
     
     func actionForUserInterfaceStyle(_ style: Int) {
-        self.appearanceManager.setAppearance(to: style)
+        self.appearanceUseCaseInteractor.save(appearance: style)
         self.userInterfaceResponder.transition(to: style)
     }
     
@@ -42,6 +42,12 @@ class SettingsViewModel {
     
     func clearAllStoredData() {
         self.groupUseCaseInteractor.clear()
+    }
+}
+
+extension SettingsViewModel: AppearanceUseCaseOutputBoundary {
+    func send(appearance: Int) {
+        self.appearance = appearance
     }
 }
 

@@ -40,6 +40,7 @@
 		4F7C1BAA272D0F5300B55C15 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BA9272D0F5300B55C15 /* Group.swift */; };
 		4F7C1BAD272DBED800B55C15 /* BookmarkAccessInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BAC272DBED800B55C15 /* BookmarkAccessInterface.swift */; };
 		4F7C1BAF272EEE6400B55C15 /* GroupAccessInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BAE272EEE6400B55C15 /* GroupAccessInterface.swift */; };
+		4F7C1BB227305CEA00B55C15 /* AppearanceAccessInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BB127305CEA00B55C15 /* AppearanceAccessInterface.swift */; };
 		4F83D466270C6F500056D56D /* CorgiGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D465270C6F500056D56D /* CorgiGuideView.swift */; };
 		4F83D469270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D468270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift */; };
 		4F83D46B270CB93E0056D56D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D46A270CB93E0056D56D /* CollectionViewCell.swift */; };
@@ -125,7 +126,6 @@
 		4FF0102A26F4F9A1009CABCC /* SettingsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0102926F4F9A1009CABCC /* SettingsNavigator.swift */; };
 		4FF0102C26F6296C009CABCC /* BookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0102B26F6296C009CABCC /* BookmarkTableViewCell.swift */; };
 		4FF0102F26F643A3009CABCC /* UIImagerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0102E26F643A3009CABCC /* UIImagerLoader.swift */; };
-		4FF0103226F716E2009CABCC /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0103126F716E2009CABCC /* AppearanceManager.swift */; };
 		4FF0103526F71857009CABCC /* SettingsDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0103426F71857009CABCC /* SettingsDependencyContainer.swift */; };
 		4FF0103C26F8EE35009CABCC /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0103B26F8EE35009CABCC /* SettingsViewModel.swift */; };
 		4FF0103E26F8EE4E009CABCC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0103D26F8EE4E009CABCC /* SettingsView.swift */; };
@@ -210,6 +210,7 @@
 		4F7C1BA9272D0F5300B55C15 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		4F7C1BAC272DBED800B55C15 /* BookmarkAccessInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkAccessInterface.swift; sourceTree = "<group>"; };
 		4F7C1BAE272EEE6400B55C15 /* GroupAccessInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAccessInterface.swift; sourceTree = "<group>"; };
+		4F7C1BB127305CEA00B55C15 /* AppearanceAccessInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceAccessInterface.swift; sourceTree = "<group>"; };
 		4F83D465270C6F500056D56D /* CorgiGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorgiGuideView.swift; sourceTree = "<group>"; };
 		4F83D468270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorgiGuideVerticalTextStackView.swift; sourceTree = "<group>"; };
 		4F83D46A270CB93E0056D56D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -300,7 +301,6 @@
 		4FF0102926F4F9A1009CABCC /* SettingsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigator.swift; sourceTree = "<group>"; };
 		4FF0102B26F6296C009CABCC /* BookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewCell.swift; sourceTree = "<group>"; };
 		4FF0102E26F643A3009CABCC /* UIImagerLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagerLoader.swift; sourceTree = "<group>"; };
-		4FF0103126F716E2009CABCC /* AppearanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
 		4FF0103426F71857009CABCC /* SettingsDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDependencyContainer.swift; sourceTree = "<group>"; };
 		4FF0103B26F8EE35009CABCC /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		4FF0103D26F8EE4E009CABCC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -434,6 +434,7 @@
 		4F7C1B8D272C65F300B55C15 /* Interface Adapters */ = {
 			isa = PBXGroup;
 			children = (
+				4FAE634526DFEE420057A4A7 /* User Interface */,
 			);
 			path = "Interface Adapters";
 			sourceTree = "<group>";
@@ -463,7 +464,6 @@
 		4F7C1B90272C664200B55C15 /* Appearance Use Case */ = {
 			isa = PBXGroup;
 			children = (
-				4FF0103126F716E2009CABCC /* AppearanceManager.swift */,
 				4F7C1B9D272C677100B55C15 /* AppearanceUseCaseInteractor.swift */,
 				4F7C1B9F272C678500B55C15 /* AppearanceUseCaseInputBoundary.swift */,
 				4F7C1BA1272C679C00B55C15 /* AppearanceUseCaseOutputBoundary.swift */,
@@ -509,6 +509,7 @@
 			children = (
 				4F7C1BAC272DBED800B55C15 /* BookmarkAccessInterface.swift */,
 				4F7C1BAE272EEE6400B55C15 /* GroupAccessInterface.swift */,
+				4F7C1BB127305CEA00B55C15 /* AppearanceAccessInterface.swift */,
 			);
 			path = "Data Access Interface";
 			sourceTree = "<group>";
@@ -776,7 +777,6 @@
 				4F8CE02227246CE5000E6E4B /* Localization */,
 				4F3F5D362726760A00164F3F /* Extension */,
 				4F3F5D372726774900164F3F /* Dependency Container */,
-				4FAE634526DFEE420057A4A7 /* User Interface */,
 				4FAE631726DE8DC50057A4A7 /* Assets.xcassets */,
 				4FAE631926DE8DC50057A4A7 /* LaunchScreen.storyboard */,
 				4FAE631C26DE8DC50057A4A7 /* Info.plist */,
@@ -1182,7 +1182,7 @@
 				4FF0103C26F8EE35009CABCC /* SettingsViewModel.swift in Sources */,
 				4FAE634226DFEBF20057A4A7 /* CategoryNavigator.swift in Sources */,
 				4FAE633A26DFE3A20057A4A7 /* BookmarkDependencyContainer.swift in Sources */,
-				4FF0103226F716E2009CABCC /* AppearanceManager.swift in Sources */,
+				4F7C1BB227305CEA00B55C15 /* AppearanceAccessInterface.swift in Sources */,
 				4F7C1BAA272D0F5300B55C15 /* Group.swift in Sources */,
 				4FAE635626E288980057A4A7 /* BookmarkVIewModel.swift in Sources */,
 				4FAE634426DFEC040057A4A7 /* BookmarkNavigator.swift in Sources */,

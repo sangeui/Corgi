@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol AppearanceUseCaseOutputBoundary {
-    
+protocol AppearanceUseCaseOutputBoundary: AnyObject {
+    func send(appearance: Int)
 }

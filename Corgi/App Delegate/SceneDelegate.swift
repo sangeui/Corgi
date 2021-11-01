@@ -9,6 +9,8 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
+    
+    private let appearanceUserCaseInteractor: AppearanceUseCaseInteractor = .init(dataAccessInterface: AppearanceUserDefaults())
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -17,19 +19,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let rootViewController: UIViewController
         
-        
-        
         if let container: MainDependencyContainer = .init(userInterfaceResponder: self) {
             rootViewController = container.createMainViewController()
-            let appearanceManager = container.getAppearanceManager()
-            let appearance = appearanceManager.getAppearance() ?? UIUserInterfaceStyle.unspecified.rawValue
-            let userInterfaceStyle: UIUserInterfaceStyle = .init(rawValue: appearance) ?? .unspecified
-            windowScene.windows.forEach({ $0.overrideUserInterfaceStyle = userInterfaceStyle })
         } else {
             rootViewController = .init()
         }
         
-        
+        self.appearanceUserCaseInteractor.outputBoundary = self
+        self.appearanceUserCaseInteractor.read()
 
         self.window?.makeKeyAndVisible()
         self.window?.rootViewController = rootViewController
@@ -37,6 +34,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func sceneDidEnterBackground(_ scene: UIScene) {
         CorgiPasteboard.shared.temp(bool: true)
+    }
+}
+
+extension SceneDelegate: AppearanceUseCaseOutputBoundary {
+    func send(appearance: Int) {
+        let userInterfaceStyle: UIUserInterfaceStyle = .init(rawValue: appearance) ?? .unspecified
+        self.window?.windowScene?.windows.forEach({ $0.overrideUserInterfaceStyle = userInterfaceStyle })
     }
 }
 

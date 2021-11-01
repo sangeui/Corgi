@@ -8,4 +8,6 @@
 import Foundation
 
 protocol AppearanceUseCaseInputBoundary {
+    func save(appearance: Int)
+    func read()
 }
