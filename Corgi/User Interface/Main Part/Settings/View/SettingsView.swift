@@ -6,10 +6,11 @@
 //
 
 import UIKit
-import MessageUI
+import Combine
 
 class SettingsView: UITableView {
     private let viewModel: SettingsViewModel
+    private var subscriptions = Set<AnyCancellable>()
     
     init(viewModel: SettingsViewModel) {
         self.viewModel = viewModel
@@ -63,15 +64,8 @@ extension SettingsView: UITableViewDataSource {
         let cell = tableView.dequeue(identifier: SettingTableViewCell.reuseIdentifier, for: indexPath) as? SettingTableViewCell
         cell?.primaryText = self.viewModel.titleOfSubSetting(of: indexPath.row, in: indexPath.section) ?? ""
         
-        if indexPath.section == .zero, indexPath.row == 1,
-                  let userInterfaceStyle = UIUserInterfaceStyle(rawValue:(self.viewModel.getAppearance())) {
-            if userInterfaceStyle == .dark {
-                cell?.secondaryText = LocalizedString("settings_uistyle_dark")
-            } else if userInterfaceStyle == .light {
-                cell?.secondaryText = LocalizedString("settings_uistyle_light")
-            } else {
-                cell?.secondaryText = LocalizedString("settings_uistyle_default")
-            }
+        if indexPath.section == .zero, indexPath.row == 1 {
+            self.viewModel.getAppearance()
         }
         
         return cell ?? .init()
@@ -83,6 +77,28 @@ extension SettingsView: UITableViewDataSource {
 }
 
 private extension SettingsView {
+    func subscribe(to publisher: AnyPublisher<Int?, Never>) {
+        publisher
+            .subscribe(on: DispatchQueue.main)
+            .compactMap({ $0 })
+            .sink{ [weak self] appearance in
+                guard let uiStyle = UIUserInterfaceStyle(rawValue: appearance) else { return }
+                
+                guard let cell = self?.cellForRow(at: .init(row: 1, section: 0)) as? SettingTableViewCell else { return }
+                
+                var secondaryText = ""
+                
+                switch uiStyle {
+                case .dark: secondaryText = LocalizedString("settings_uistyle_dark")
+                case .light: secondaryText = LocalizedString("settings_uistyle_light")
+                case .unspecified: secondaryText = LocalizedString("settings_uistyle_default")
+                @unknown default: fatalError()
+                }
+                
+                cell.secondaryText = secondaryText
+            }
+            .store(in: &self.subscriptions)
+    }
     func setup() {
         self.dataSource = self
         self.delegate = self
@@ -90,5 +106,6 @@ private extension SettingsView {
         self.alwaysBounceVertical = .no
         self.backgroundColor = .corgi.background.base
         self.register(SettingTableViewCell.self, identifier: SettingTableViewCell.reuseIdentifier)
+        self.subscribe(to: self.viewModel.$appearance.eraseToAnyPublisher())
     }
 }
