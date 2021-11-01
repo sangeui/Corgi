@@ -434,6 +434,7 @@
 		4F7C1B8D272C65F300B55C15 /* Interface Adapters */ = {
 			isa = PBXGroup;
 			children = (
+				4FAE634526DFEE420057A4A7 /* User Interface */,
 			);
 			path = "Interface Adapters";
 			sourceTree = "<group>";
@@ -776,7 +777,6 @@
 				4F8CE02227246CE5000E6E4B /* Localization */,
 				4F3F5D362726760A00164F3F /* Extension */,
 				4F3F5D372726774900164F3F /* Dependency Container */,
-				4FAE634526DFEE420057A4A7 /* User Interface */,
 				4FAE631726DE8DC50057A4A7 /* Assets.xcassets */,
 				4FAE631926DE8DC50057A4A7 /* LaunchScreen.storyboard */,
 				4FAE631C26DE8DC50057A4A7 /* Info.plist */,
