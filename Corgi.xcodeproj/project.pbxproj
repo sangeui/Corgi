@@ -40,6 +40,7 @@
 		4F7C1BAA272D0F5300B55C15 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BA9272D0F5300B55C15 /* Group.swift */; };
 		4F7C1BAD272DBED800B55C15 /* BookmarkAccessInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BAC272DBED800B55C15 /* BookmarkAccessInterface.swift */; };
 		4F7C1BAF272EEE6400B55C15 /* GroupAccessInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BAE272EEE6400B55C15 /* GroupAccessInterface.swift */; };
+		4F7C1BB227305CEA00B55C15 /* AppearanceAccessInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C1BB127305CEA00B55C15 /* AppearanceAccessInterface.swift */; };
 		4F83D466270C6F500056D56D /* CorgiGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D465270C6F500056D56D /* CorgiGuideView.swift */; };
 		4F83D469270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D468270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift */; };
 		4F83D46B270CB93E0056D56D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83D46A270CB93E0056D56D /* CollectionViewCell.swift */; };
@@ -210,6 +211,7 @@
 		4F7C1BA9272D0F5300B55C15 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		4F7C1BAC272DBED800B55C15 /* BookmarkAccessInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkAccessInterface.swift; sourceTree = "<group>"; };
 		4F7C1BAE272EEE6400B55C15 /* GroupAccessInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAccessInterface.swift; sourceTree = "<group>"; };
+		4F7C1BB127305CEA00B55C15 /* AppearanceAccessInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceAccessInterface.swift; sourceTree = "<group>"; };
 		4F83D465270C6F500056D56D /* CorgiGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorgiGuideView.swift; sourceTree = "<group>"; };
 		4F83D468270CA6F70056D56D /* CorgiGuideVerticalTextStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorgiGuideVerticalTextStackView.swift; sourceTree = "<group>"; };
 		4F83D46A270CB93E0056D56D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 			children = (
 				4F7C1BAC272DBED800B55C15 /* BookmarkAccessInterface.swift */,
 				4F7C1BAE272EEE6400B55C15 /* GroupAccessInterface.swift */,
+				4F7C1BB127305CEA00B55C15 /* AppearanceAccessInterface.swift */,
 			);
 			path = "Data Access Interface";
 			sourceTree = "<group>";
@@ -1183,6 +1186,7 @@
 				4FAE634226DFEBF20057A4A7 /* CategoryNavigator.swift in Sources */,
 				4FAE633A26DFE3A20057A4A7 /* BookmarkDependencyContainer.swift in Sources */,
 				4FF0103226F716E2009CABCC /* AppearanceManager.swift in Sources */,
+				4F7C1BB227305CEA00B55C15 /* AppearanceAccessInterface.swift in Sources */,
 				4F7C1BAA272D0F5300B55C15 /* Group.swift in Sources */,
 				4FAE635626E288980057A4A7 /* BookmarkVIewModel.swift in Sources */,
 				4FAE634426DFEC040057A4A7 /* BookmarkNavigator.swift in Sources */,
