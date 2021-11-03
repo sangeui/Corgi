@@ -68,6 +68,17 @@ extension AdditionView: UITextFieldDelegate {
             self.viewModel.userDidEnterDescription(description: textField.text ?? .empty)
         }
     }
+    
+    @objc
+    func textFieldDidChange(_ textField: UITextField) {
+        if textField.isEqual(self.urlTextField) {
+            self.viewModel.userDidEnterURLtext(urlText: textField.text ?? .empty)
+        } else if textField.isEqual(self.categoryTextField) {
+            self.viewModel.userDidEnterCategory(category: textField.text ?? .empty)
+        } else if textField.isEqual(self.descriptionTextField) {
+            self.viewModel.userDidEnterDescription(description: textField.text ?? .empty)
+        }
+    }
 }
 
 private extension AdditionView {
@@ -179,6 +190,8 @@ private extension AdditionView {
         
         let bottomBorderDecorator: BottomBorderDecorator = .init()
         textField.decorate(with: bottomBorderDecorator)
+        
+        textField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
     }
     
     func setupSaveButton(_ button: UIButton) {
